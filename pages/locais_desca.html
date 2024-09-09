@@ -1,0 +1,1195 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+02/09/2024 20:43:32 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1280, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,800|Inter:600italic,700,600,800,400|Sawarabi+Mincho:400|Jockey+One:400|Kanit:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66d62257ed09e85b5a9cd6f5.66d62257ed09e85b5a9cd6f8.yQUqwhs.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d9d9d9;
+  --black: #000000;
+  --coconut: #fefcfc;
+  --crusoe: #013f13;
+  --granny-smith-apple: #9cdea0;
+  --killarney: #2d673e;
+  --salem: #0d7e2e;
+  --snowy-mint: #dbfedc;
+  --sonic-silver: #727272;
+  --white: #ffffff;
+ 
+  --font-size-l: 23px;
+  --font-size-m: 20px;
+  --font-size-s: 17px;
+  --font-size-xs: 16px;
+  --font-size-xxs: 14px;
+  --font-size-xxxs: 12px;
+  --font-size-xxxxs: 11px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-jockey_one: "Jockey One", Helvetica;
+  --font-family-kanit: "Kanit", Helvetica;
+  --font-family-roboto_slab: "Roboto Slab", Helvetica;
+  --font-family-sawarabi_mincho: "Sawarabi Mincho", Helvetica;
+}
+.inter-bold-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-extra-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.inter-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-salem-17px {
+  color: var(--salem);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-sonic-silver-9px {
+  color: var(--sonic-silver);
+  font-family: var(--font-family-inter);
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.robotoslab-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-20px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-coconut-25px {
+  color: var(--coconut);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jockeyone-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-jockey_one);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-extra-bold-killarney-10px {
+  color: var(--killarney);
+  font-family: var(--font-family-inter);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.robotoslab-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-salem-40px {
+  color: var(--salem);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-11px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-40px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-45px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.fale-conosco-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.image-254 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.image {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+/* screen - locais-de-descarte */
+
+.locais-de-descarte {
+  background-color: transparent;
+  height: 1316px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1280px;
+}
+
+.locais-de-descarte .rectangle-1359-7slC6i {
+  background: linear-gradient(180deg, rgb(240.99069893360138, 249.6875050663948, 241.35090440511703) 0%, rgb(255, 255, 255) 100%);
+  background-color: transparent;
+  height: 892px;
+  left: 0px;
+  position: absolute;
+  top: 82px;
+  width: 1279px;
+}
+
+.locais-de-descarte .rectangle-1229-7slC6i {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 79px;
+  left: 393px;
+  position: absolute;
+  top: 183px;
+  width: 494px;
+}
+
+.locais-de-descarte .title-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 376px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 191px;
+  white-space: nowrap;
+  width: 528px;
+}
+
+.locais-de-descarte .rectangle-1368-7slC6i {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 55px;
+  left: 456px;
+  position: absolute;
+  top: 800px;
+  width: 287px;
+}
+
+.locais-de-descarte .buscar-7slC6i {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 477px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 804px;
+  width: 239px;
+}
+
+.locais-de-descarte .rectangle-1346-7slC6i {
+  background-color: var(--salem);
+  height: 85px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1279px;
+}
+
+.locais-de-descarte .do-utilizador-2-8-7slC6i {
+  background-color: transparent;
+  height: 50px;
+  left: 26px;
+  object-fit: cover;
+  position: absolute;
+  top: 19px;
+  width: 48px;
+}
+
+.locais-de-descarte .rectangle-1347-7slC6i {
+  background-color: transparent;
+  height: 35px;
+  left: 1194px;
+  position: absolute;
+  top: 27px;
+  width: 44px;
+}
+
+.locais-de-descarte .rectangle-1348-7slC6i {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 35px;
+  left: 1020px;
+  position: absolute;
+  top: 28px;
+  width: 152px;
+}
+
+.locais-de-descarte .pesquisa-de-lupa-2-2-7slC6i {
+  background-color: transparent;
+  height: 19px;
+  left: 1207px;
+  object-fit: cover;
+  position: absolute;
+  top: 35px;
+  width: 19px;
+}
+
+.locais-de-descarte .clique-aqui-para-pesquisar-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 1037px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 37px;
+  width: 189px;
+}
+
+.locais-de-descarte .line-148-7slC6i {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 1280px;
+}
+
+.locais-de-descarte .image-248-7slC6i {
+  background-color: transparent;
+  height: 416px;
+  left: 540px;
+  position: absolute;
+  top: 323px;
+  width: 698px;
+}
+
+.locais-de-descarte .image-249-7slC6i {
+  background-color: transparent;
+  height: 43px;
+  left: 805px;
+  object-fit: cover;
+  position: absolute;
+  top: 398px;
+  width: 40px;
+}
+
+.locais-de-descarte .image-252-7slC6i {
+  background-color: transparent;
+  height: 43px;
+  left: 805px;
+  object-fit: cover;
+  position: absolute;
+  top: 554px;
+  width: 40px;
+}
+
+.locais-de-descarte .image-251-7slC6i {
+  background-color: transparent;
+  height: 43px;
+  left: 958px;
+  object-fit: cover;
+  position: absolute;
+  top: 554px;
+  width: 40px;
+}
+
+.locais-de-descarte .image-250-7slC6i {
+  background-color: transparent;
+  height: 42px;
+  left: 669px;
+  object-fit: cover;
+  position: absolute;
+  top: 576px;
+  width: 39px;
+}
+
+.locais-de-descarte .rectangle-1369-7slC6i {
+  background-color: var(--snowy-mint);
+  height: 342px;
+  left: 0px;
+  position: absolute;
+  top: 974px;
+  width: 1279px;
+}
+
+.locais-de-descarte .navegao-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 1050px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1008px;
+  width: 159px;
+}
+
+.locais-de-descarte .redes-sociais-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 718px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1013px;
+  width: 159px;
+}
+
+.locais-de-descarte .contato-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 380px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1020px;
+  width: 160px;
+}
+
+.locais-de-descarte .image-254-7slC6i {
+  background-color: transparent;
+  height: 200px;
+  left: 101px;
+  object-fit: cover;
+  position: absolute;
+  top: 1056px;
+  width: 173px;
+}
+
+.locais-de-descarte .image-255-7slC6i {
+  background-color: transparent;
+  height: 40px;
+  left: 734px;
+  object-fit: cover;
+  position: absolute;
+  top: 1053px;
+  width: 52px;
+}
+
+.locais-de-descarte .x13-91234-5678-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 411px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1065px;
+  width: 158px;
+}
+
+.locais-de-descarte .instagram-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 807px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1065px;
+  width: 86px;
+}
+
+.locais-de-descarte .image-256-7slC6i {
+  background-color: transparent;
+  height: 39px;
+  left: 734px;
+  object-fit: cover;
+  position: absolute;
+  top: 1102px;
+  width: 52px;
+}
+
+.locais-de-descarte .sustentechoficialgmailcom-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 411px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1106px;
+  width: 278px;
+}
+
+.locais-de-descarte .facebook-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 807px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1109px;
+  width: 90px;
+}
+
+.locais-de-descarte .fale-conosco-7slC6i {
+  left: 411px;
+  top: 1143px;
+  width: 131px;
+}
+
+.locais-de-descarte .image-257-7slC6i {
+  background-color: transparent;
+  height: 39px;
+  left: 734px;
+  object-fit: cover;
+  position: absolute;
+  top: 1148px;
+  width: 52px;
+}
+
+.locais-de-descarte .tiktok-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 807px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1155px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.locais-de-descarte .perguntas-frequentes-7slC6i {
+  left: 411px;
+  top: 1177px;
+  width: 189px;
+}
+
+.locais-de-descarte .image-258-7slC6i {
+  background-color: transparent;
+  height: 27px;
+  left: 734px;
+  object-fit: cover;
+  position: absolute;
+  top: 1202px;
+  width: 48px;
+}
+
+.locais-de-descarte .discord-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 807px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1207px;
+  width: 65px;
+}
+
+.locais-de-descarte .image-259-7slC6i {
+  background-color: transparent;
+  height: 36px;
+  left: 734px;
+  object-fit: cover;
+  position: absolute;
+  top: 1241px;
+  width: 48px;
+}
+
+.locais-de-descarte .github-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 807px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1251px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.locais-de-descarte .encontre-o-ponto-de-coleta-mais-prximo-7slC6i {
+  background-color: transparent;
+  color: var(--salem);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 93px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 322px;
+  width: 404px;
+}
+
+.locais-de-descarte .rectangle-1360-7slC6i {
+  background-color: #9cdea0ed;
+  height: 52px;
+  left: 78px;
+  position: absolute;
+  top: 441px;
+  width: 434px;
+}
+
+.locais-de-descarte .rectangle-1362-7slC6i {
+  background-color: var(--granny-smith-apple);
+  height: 51px;
+  left: 78px;
+  position: absolute;
+  top: 597px;
+  width: 434px;
+}
+
+.locais-de-descarte .rectangle-1363-7slC6i {
+  background-color: var(--granny-smith-apple);
+  height: 51px;
+  left: 78px;
+  position: absolute;
+  top: 688px;
+  width: 434px;
+}
+
+.locais-de-descarte .rectangle-1361-7slC6i {
+  background-color: var(--granny-smith-apple);
+  height: 45px;
+  left: 78px;
+  position: absolute;
+  top: 520px;
+  width: 434px;
+}
+
+.locais-de-descarte .rectangle-1364-7slC6i {
+  background-color: var(--salem);
+  height: 52px;
+  left: 78px;
+  position: absolute;
+  top: 441px;
+  width: 102px;
+}
+
+.locais-de-descarte .rectangle-1367-7slC6i {
+  background-color: var(--salem);
+  height: 52px;
+  left: 78px;
+  position: absolute;
+  top: 687px;
+  width: 102px;
+}
+
+.locais-de-descarte .rectangle-1366-7slC6i {
+  background-color: var(--salem);
+  height: 52px;
+  left: 78px;
+  position: absolute;
+  top: 596px;
+  width: 102px;
+}
+
+.locais-de-descarte .rectangle-1365-7slC6i {
+  background-color: var(--salem);
+  height: 52px;
+  left: 78px;
+  position: absolute;
+  top: 517px;
+  width: 102px;
+}
+
+.locais-de-descarte .cep-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 100px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 440px;
+  width: 58px;
+}
+
+.locais-de-descarte .span0-7r3Ek8 {
+}
+
+.locais-de-descarte .span1-7r3Ek8 {
+  color: var(--white);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.locais-de-descarte .produto-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 695px;
+  width: 92px;
+}
+
+.locais-de-descarte .porte-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 93px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 610px;
+  width: 63px;
+}
+
+.locais-de-descarte .distncia-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 74px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 525px;
+  width: 106px;
+}
+
+.locais-de-descarte .line-147-7slC6i {
+  background-color: transparent;
+  height: 1316px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.locais-de-descarte .line-146-7slC6i {
+  background-color: transparent;
+  height: 1316px;
+  left: 1279px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.locais-de-descarte .line-149-7slC6i {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 1315px;
+  width: 1279px;
+}
+
+.locais-de-descarte .line-145-7slC6i {
+  background-color: transparent;
+  height: 4px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 973px;
+  width: 1280px;
+}
+
+.locais-de-descarte .pgina-inicial-7slC6i {
+  background-color: transparent;
+  height: auto;
+  left: 1087px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1048px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.locais-de-descarte .cadastre-se-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1087px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1075px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.locais-de-descarte .cadastro-de-produtos-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1100px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.locais-de-descarte .produtos-7slC6i {
+  left: 1088px;
+  top: 1126px;
+  width: 88px;
+}
+
+.locais-de-descarte .sobre-ns-7slC6i {
+  left: 1088px;
+  top: 1154px;
+  width: 88px;
+}
+
+.locais-de-descarte .fale-conosco-Li5FxB {
+  cursor: pointer;
+  left: 1088px;
+  top: 1182px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.locais-de-descarte .sugestes-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1210px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.locais-de-descarte .perguntas-frequentes-Li5FxB {
+  cursor: pointer;
+  left: 1088px;
+  top: 1235px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.locais-de-descarte .locais-de-descarte-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1262px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.locais-de-descarte .seta-para-baixo-1-7slC6i {
+  background-color: transparent;
+  height: 33px;
+  left: 936px;
+  object-fit: cover;
+  position: absolute;
+  top: 29px;
+  width: 42px;
+}
+
+.locais-de-descarte .fale-conosco-agyPW5 {
+  cursor: pointer;
+  left: 555px;
+  top: 32px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.locais-de-descarte .locais-de-reciclagem-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 714px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 32px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.locais-de-descarte .sobre-ns-Li5FxB {
+  left: 428px;
+  top: 32px;
+  width: auto;
+}
+
+.locais-de-descarte .incio-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 111px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 32px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.locais-de-descarte .produtos-Li5FxB {
+  left: 195px;
+  top: 32px;
+  width: auto;
+}
+
+.locais-de-descarte .cadastro-7slC6i {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 311px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 32px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.locais-de-descarte .perguntas-frequentes-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.locais-de-descarte .produtos-1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.locais-de-descarte .sobre-ns {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="locais-de-descarte"><div class="container-center-horizontal"><div class="locais-de-descarte screen " data-id="521:57"><div class="rectangle-1359-7slC6i" data-id="508:82"></div><div class="rectangle-1229-7slC6i" data-id="460:51"></div><h1 class="title-7slC6i robotoslab-normal-white-40px" data-id="460:52">Locais de Descarte</h1><div class="rectangle-1368-7slC6i" data-id="511:3"></div><div class="buscar-7slC6i" data-id="511:4">Buscar</div><div class="rectangle-1346-7slC6i" data-id="512:18"></div><img class="do-utilizador-2-8-7slC6i" data-id="512:19" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/do-utilizador--2--12.png" alt="do-utilizador (2) 8"><img class="rectangle-1347-7slC6i" data-id="512:20" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/rectangle-1347.svg" alt="Rectangle 1347"><div class="rectangle-1348-7slC6i" data-id="512:21"></div><img class="pesquisa-de-lupa-2-2-7slC6i" data-id="512:23" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/pesquisa-de-lupa--2--7.png" alt="pesquisa-de-lupa (2) 2"><div class="clique-aqui-para-pesquisar-7slC6i inter-semi-bold-sonic-silver-9px" data-id="512:28">Clique aqui para pesquisar</div><img class="line-148-7slC6i" data-id="460:57" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-71.svg" alt="Line 148"><img class="image-248-7slC6i" data-id="460:61" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-248.png" alt="image 248"><img class="image-249-7slC6i" data-id="460:69" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-249.png" alt="image 249"><img class="image-252-7slC6i" data-id="460:72" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-249.png" alt="image 252"><img class="image-251-7slC6i" data-id="460:71" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-249.png" alt="image 251"><img class="image-250-7slC6i" data-id="460:70" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-249.png" alt="image 250"><div class="rectangle-1369-7slC6i" data-id="512:30"></div><div class="navegao-7slC6i inter-normal-salem-17px" data-id="512:31">Navegação</div><div class="redes-sociais-7slC6i inter-normal-salem-17px" data-id="512:32">Redes Sociais</div><div class="contato-7slC6i inter-normal-salem-17px" data-id="512:33">Contato</div><img class="image-254-7slC6i" data-id="512:34" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-295-1.png" alt="image 254"><img class="image-255-7slC6i" data-id="512:35" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-297.png" alt="image 255"><div class="x13-91234-5678-7slC6i inter-bold-black-12px" data-id="512:36">(13) 91234-5678</div><div class="instagram-7slC6i inter-bold-black-12px" data-id="512:37">Instagram</div><img class="image-256-7slC6i" data-id="512:39" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-295.png" alt="image 256"><div class="sustentechoficialgmailcom-7slC6i inter-bold-black-12px" data-id="512:41">sustentech.oficial@gmail.com</div><div class="facebook-7slC6i inter-bold-black-12px" data-id="512:42">Facebook</div><div class="fale-conosco-7slC6i fale-conosco-1 inter-bold-black-12px" data-id="512:43">Fale Conosco</div><img class="image-257-7slC6i" data-id="512:45" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-296.png" alt="image 257"><div class="tiktok-7slC6i inter-bold-black-12px" data-id="512:46">Tiktok</div><div class="perguntas-frequentes-7slC6i perguntas-frequentes-1 inter-bold-black-12px" data-id="512:47">Perguntas Frequentes</div><img class="image-258-7slC6i" data-id="512:49" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-299.png" alt="image 258"><div class="discord-7slC6i inter-bold-black-12px" data-id="512:50">Discord</div><img class="image-259-7slC6i" data-id="512:52" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-298.png" alt="image 259"><div class="github-7slC6i inter-bold-black-12px" data-id="512:53">Github</div><p class="encontre-o-ponto-de-coleta-mais-prximo-7slC6i" data-id="508:83">Encontre o ponto de coleta mais próximo</p><div class="rectangle-1360-7slC6i" data-id="508:84"></div><div class="rectangle-1362-7slC6i" data-id="508:86"></div><div class="rectangle-1363-7slC6i" data-id="508:87"></div><div class="rectangle-1361-7slC6i" data-id="508:85"></div><div class="rectangle-1364-7slC6i" data-id="508:88"></div><div class="rectangle-1367-7slC6i" data-id="508:91"></div><div class="rectangle-1366-7slC6i" data-id="508:90"></div><div class="rectangle-1365-7slC6i" data-id="508:89"></div><div class="cep-7slC6i sawarabimincho-normal-white-20px" data-id="508:92"><span class="span0-7r3Ek8 sawarabimincho-normal-white-20px">CEP</span><span class="span1-7r3Ek8">:</span></div><div class="produto-7slC6i sawarabimincho-normal-white-20px" data-id="508:95">Produto:</div><div class="porte-7slC6i sawarabimincho-normal-white-20px" data-id="508:94">Porte:</div><div class="distncia-7slC6i sawarabimincho-normal-white-20px" data-id="508:93">Distância:</div><img class="line-147-7slC6i" data-id="460:56" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-147.svg" alt="Line 147"><img class="line-146-7slC6i" data-id="460:55" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-147.svg" alt="Line 146"><img class="line-149-7slC6i" data-id="512:55" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-149-1.svg" alt="Line 149"><img class="line-145-7slC6i" data-id="460:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-145.svg" alt="Line 145"><div class="pgina-inicial-7slC6i inter-bold-black-12px" data-id="598:1037">Página Inicial</div><a href="cadastro-de-usuarios"><div class="cadastre-se-7slC6i inter-bold-black-12px" data-id="598:1038">Cadastre-se</div></a><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-7slC6i inter-bold-black-12px" data-id="598:1039">Cadastro de Produtos</div></a><a href="produtos"><div class="produtos-7slC6i produtos-1 inter-bold-black-12px" data-id="598:1040">Produtos</div></a><a href="sobre-nos"><div class="sobre-ns-7slC6i sobre-ns inter-bold-black-12px" data-id="598:1041">Sobre Nós</div></a><a href="fale-conosco"><div class="fale-conosco-Li5FxB fale-conosco-1 inter-bold-black-12px" data-id="598:1042">Fale Conosco</div></a><a href="sugestoes"><div class="sugestes-7slC6i inter-bold-black-12px" data-id="598:1043">Sugestões</div></a><a href="perguntas-frequentes"><div class="perguntas-frequentes-Li5FxB perguntas-frequentes-1 inter-bold-black-12px" data-id="598:1044">Perguntas Frequentes</div></a><a href="locais-de-descarte"><div class="locais-de-descarte-7slC6i inter-bold-black-12px" data-id="598:1045">Locais de Descarte</div></a><img class="seta-para-baixo-1-7slC6i" data-id="598:1053" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/seta-para-baixo-2.png" alt="seta-para-baixo 1"><a href="fale-conosco"><div class="fale-conosco-agyPW5 fale-conosco-1 inter-extra-bold-white-20px" data-id="598:1054">Fale Conosco</div></a><a href="locais-de-descarte"><div class="locais-de-reciclagem-7slC6i inter-extra-bold-white-20px" data-id="598:1055">Locais de Reciclagem</div></a><a href="sobre-nos"><div class="sobre-ns-Li5FxB sobre-ns inter-extra-bold-white-20px" data-id="598:1056">Sobre Nós</div></a><a href="pagina-inicial"><div class="incio-7slC6i inter-extra-bold-white-20px" data-id="598:1057">Início</div></a><a href="produtos"><div class="produtos-Li5FxB produtos-1 inter-extra-bold-white-20px" data-id="598:1058">Produtos</div></a><a href="cadastro-de-usuarios"><div class="cadastro-7slC6i inter-extra-bold-white-20px" data-id="598:1059">Cadastro</div></a></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

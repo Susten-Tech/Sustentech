@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+02/09/2024 20:43:32 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1307.001220703125, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,800|Inter:600italic,700,600,800,400|Sawarabi+Mincho:400|Jockey+One:400|Kanit:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66d62257ed09e85b5a9cd6f5.66d62257ed09e85b5a9cd6f8.yQUqwhs.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d9d9d9;
+  --black: #000000;
+  --coconut: #fefcfc;
+  --crusoe: #013f13;
+  --granny-smith-apple: #9cdea0;
+  --killarney: #2d673e;
+  --salem: #0d7e2e;
+  --snowy-mint: #dbfedc;
+  --sonic-silver: #727272;
+  --white: #ffffff;
+ 
+  --font-size-l: 23px;
+  --font-size-m: 20px;
+  --font-size-s: 17px;
+  --font-size-xs: 16px;
+  --font-size-xxs: 14px;
+  --font-size-xxxs: 12px;
+  --font-size-xxxxs: 11px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-jockey_one: "Jockey One", Helvetica;
+  --font-family-kanit: "Kanit", Helvetica;
+  --font-family-roboto_slab: "Roboto Slab", Helvetica;
+  --font-family-sawarabi_mincho: "Sawarabi Mincho", Helvetica;
+}
+.inter-bold-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-extra-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.inter-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-salem-17px {
+  color: var(--salem);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-sonic-silver-9px {
+  color: var(--sonic-silver);
+  font-family: var(--font-family-inter);
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.robotoslab-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-20px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-coconut-25px {
+  color: var(--coconut);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jockeyone-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-jockey_one);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-extra-bold-killarney-10px {
+  color: var(--killarney);
+  font-family: var(--font-family-inter);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.robotoslab-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-salem-40px {
+  color: var(--salem);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-11px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-40px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-45px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.fale-conosco-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.image-254 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.image {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+/* screen - perguntas-frequentes */
+
+.perguntas-frequentes {
+  background-color: transparent;
+  height: 1459.0px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1307.0px;
+}
+
+.perguntas-frequentes .rectangle-1-EOivTH {
+  background: linear-gradient(180deg, rgb(240.99069893360138, 249.6875050663948, 241.35090440511703) 0%, rgb(255, 255, 255) 100%);
+  background-color: transparent;
+  height: 1033px;
+  left: 2px;
+  position: absolute;
+  top: 85px;
+  width: 1282px;
+}
+
+.perguntas-frequentes .rectangle-1357-EOivTH {
+  background-color: #f5fdf5;
+  height: 397px;
+  left: 126px;
+  position: absolute;
+  top: 609px;
+  width: 1022px;
+}
+
+.perguntas-frequentes .line-81-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: -6909px;
+  object-fit: cover;
+  position: absolute;
+  top: 1549px;
+  width: 1284px;
+}
+
+.perguntas-frequentes .line-95-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 1118px;
+  width: 1285px;
+}
+
+.perguntas-frequentes .line-60-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: -6909px;
+  object-fit: cover;
+  position: absolute;
+  top: 897px;
+  width: 1284px;
+}
+
+.perguntas-frequentes .line-61-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: -6884px;
+  object-fit: cover;
+  position: absolute;
+  top: 1443px;
+  width: 1282px;
+}
+
+.perguntas-frequentes .selecione-em-uma-das-perguntas-abaixo-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 437px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 558px;
+  width: 402px;
+}
+
+.perguntas-frequentes .como-fao-para-compra-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 627px;
+  width: 610px;
+}
+
+.perguntas-frequentes .o-site-tem-parcerias-EOivTH {
+  top: 908px;
+  width: 678px;
+}
+
+.perguntas-frequentes .o-site-tem-parcerias-AEtiGY {
+  top: 971px;
+  width: 699px;
+}
+
+.perguntas-frequentes .quais-tipos-de-produ-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 838px;
+  width: 991px;
+}
+
+.perguntas-frequentes .quais-so-os-benefcio-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 762px;
+  width: 961px;
+}
+
+.perguntas-frequentes .preciso-me-cadastrar-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 686px;
+  width: 945px;
+}
+
+.perguntas-frequentes .rectangle-1230-EOivTH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 56px;
+  left: 350px;
+  position: absolute;
+  top: 106px;
+  width: 529px;
+}
+
+.perguntas-frequentes .perguntas-frequentes-EOivTH {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  left: 372px;
+  text-align: right;
+  top: 112px;
+  width: 477px;
+}
+
+.perguntas-frequentes .ao-clicar-na-pergunt-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 336px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1036px;
+  width: 604px;
+}
+
+.perguntas-frequentes .uma-pgina-de-pergunt-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 86px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 268px;
+  width: 528px;
+}
+
+.perguntas-frequentes .rectangle-1358-EOivTH {
+  background-color: var(--snowy-mint);
+  height: 340px;
+  left: 0px;
+  position: absolute;
+  top: 1119px;
+  width: 1284px;
+}
+
+.perguntas-frequentes .navegao-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 1023px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1155px;
+  width: 160px;
+}
+
+.perguntas-frequentes .redes-sociais-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 719px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1156px;
+  width: 160px;
+}
+
+.perguntas-frequentes .contato-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 378px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1163px;
+  width: 161px;
+}
+
+.perguntas-frequentes .fale-conosco-EOivTH {
+  left: 410px;
+  top: 1286px;
+  width: 132px;
+}
+
+.perguntas-frequentes .sustentechoficialgmailcom-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1249px;
+  width: 279px;
+}
+
+.perguntas-frequentes .x13-91234-5678-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1208px;
+  width: 158px;
+}
+
+.perguntas-frequentes .perguntas-frequentes-AEtiGY {
+  left: 410px;
+  text-align: left;
+  top: 1320px;
+  width: 190px;
+}
+
+.perguntas-frequentes .tiktok-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 808px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1298px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.perguntas-frequentes .facebook-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 808px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1252px;
+  width: 91px;
+}
+
+.perguntas-frequentes .instagram-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 808px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1208px;
+  width: 87px;
+}
+
+.perguntas-frequentes .discord-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 808px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1350px;
+  width: 65px;
+}
+
+.perguntas-frequentes .github-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 808px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1394px;
+  white-space: nowrap;
+  width: 103px;
+}
+
+.perguntas-frequentes .rectangle-1343-EOivTH {
+  background-color: var(--salem);
+  height: 85px;
+  left: 2px;
+  position: absolute;
+  top: 0px;
+  width: 1286px;
+}
+
+.perguntas-frequentes .rectangle-1344-EOivTH {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 31px;
+  left: 999px;
+  position: absolute;
+  top: 25px;
+  width: 198px;
+}
+
+.perguntas-frequentes .clique-aqui-para-pesquisar-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 1016px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 34px;
+  width: 247px;
+}
+
+.perguntas-frequentes .rectangle-1345-EOivTH {
+  background-color: transparent;
+  height: 31px;
+  left: 1205px;
+  position: absolute;
+  top: 25px;
+  width: 58px;
+}
+
+.perguntas-frequentes .title-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 332px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 199px;
+  width: 282px;
+}
+
+.perguntas-frequentes .do-utilizador-2-12-EOivTH {
+  background-color: transparent;
+  height: 59px;
+  left: 25px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 60px;
+}
+
+.perguntas-frequentes .image-295-EOivTH {
+  height: 39px;
+  left: 750px;
+  top: 1248px;
+  width: 39px;
+}
+
+.perguntas-frequentes .image-296-EOivTH {
+  background-color: transparent;
+  height: 39px;
+  left: 750px;
+  object-fit: cover;
+  position: absolute;
+  top: 1294px;
+  width: 39px;
+}
+
+.perguntas-frequentes .image-297-EOivTH {
+  background-color: transparent;
+  height: 40px;
+  left: 750px;
+  object-fit: cover;
+  position: absolute;
+  top: 1199px;
+  width: 39px;
+}
+
+.perguntas-frequentes .image-298-EOivTH {
+  background-color: transparent;
+  height: 36px;
+  left: 750px;
+  object-fit: cover;
+  position: absolute;
+  top: 1387px;
+  width: 36px;
+}
+
+.perguntas-frequentes .image-299-EOivTH {
+  background-color: transparent;
+  height: 27px;
+  left: 750px;
+  object-fit: cover;
+  position: absolute;
+  top: 1348px;
+  width: 36px;
+}
+
+.perguntas-frequentes .image-295-AEtiGY {
+  height: 242px;
+  left: 109px;
+  top: 1160px;
+  width: 194px;
+}
+
+.perguntas-frequentes .pesquisa-de-lupa-2-7-EOivTH {
+  background-color: transparent;
+  height: 23px;
+  left: 1222px;
+  object-fit: cover;
+  position: absolute;
+  top: 29px;
+  width: 23px;
+}
+
+.perguntas-frequentes .line-160-EOivTH {
+  background-color: transparent;
+  height: 4px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 512px;
+  width: 1286px;
+}
+
+.perguntas-frequentes .image-295-HWFFpO {
+  height: 279px;
+  left: 666px;
+  top: 212px;
+  width: 442px;
+}
+
+.perguntas-frequentes .line-59-EOivTH {
+  background-color: transparent;
+  height: 1459px;
+  left: 1283px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 6px;
+}
+
+.perguntas-frequentes .line-94-EOivTH {
+  background-color: transparent;
+  height: 1459px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 3px;
+}
+
+.perguntas-frequentes .line-161-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 1287px;
+}
+
+.perguntas-frequentes .line-162-EOivTH {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 1458px;
+  width: 1282px;
+}
+
+.perguntas-frequentes .pgina-inicial-EOivTH {
+  background-color: transparent;
+  height: auto;
+  left: 1061px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1198px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.perguntas-frequentes .cadastre-se-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1061px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1225px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.perguntas-frequentes .cadastro-de-produtos-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1062px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1250px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.perguntas-frequentes .produtos-EOivTH {
+  left: 1062px;
+  top: 1276px;
+  width: 88px;
+}
+
+.perguntas-frequentes .sobre-ns-EOivTH {
+  left: 1062px;
+  top: 1304px;
+  width: 88px;
+}
+
+.perguntas-frequentes .fale-conosco-AEtiGY {
+  cursor: pointer;
+  left: 1062px;
+  top: 1332px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.perguntas-frequentes .sugestes-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1062px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1360px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.perguntas-frequentes .perguntas-frequentes-HWFFpO {
+  cursor: pointer;
+  left: 1062px;
+  text-align: left;
+  top: 1385px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.perguntas-frequentes .locais-de-descarte-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1062px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1412px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.perguntas-frequentes .seta-para-baixo-2-EOivTH {
+  background-color: transparent;
+  height: 33px;
+  left: 933px;
+  object-fit: cover;
+  position: absolute;
+  top: 26px;
+  width: 42px;
+}
+
+.perguntas-frequentes .fale-conosco-HWFFpO {
+  cursor: pointer;
+  left: 552px;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.perguntas-frequentes .locais-de-reciclagem-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 711px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.perguntas-frequentes .sobre-ns-AEtiGY {
+  left: 425px;
+  top: 29px;
+  width: auto;
+}
+
+.perguntas-frequentes .incio-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 108px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.perguntas-frequentes .produtos-AEtiGY {
+  left: 192px;
+  top: 29px;
+  width: auto;
+}
+
+.perguntas-frequentes .cadastro-EOivTH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 308px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.perguntas-frequentes .image-295 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.perguntas-frequentes .o-site-tem-parcerias {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.perguntas-frequentes .perguntas-frequentes-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.perguntas-frequentes .produtos-1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.perguntas-frequentes .sobre-ns {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="perguntas-frequentes"><div class="container-center-horizontal"><div class="perguntas-frequentes screen " data-id="503:81"><div class="rectangle-1-EOivTH" data-id="380:10"></div><div class="rectangle-1357-EOivTH" data-id="503:45"></div><img class="line-81-EOivTH" data-id="184:95" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-81.png" alt="Line 81"><img class="line-95-EOivTH" data-id="387:21" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-95.svg" alt="Line 95"><img class="line-60-EOivTH" data-id="18:234" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-81.png" alt="Line 60"><img class="line-61-EOivTH" data-id="18:258" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-81.png" alt="Line 61"><p class="selecione-em-uma-das-perguntas-abaixo-EOivTH robotoslab-normal-black-20px" data-id="18:237">Selecione em uma das perguntas abaixo:</p><p class="como-fao-para-compra-EOivTH robotoslab-normal-salem-20px" data-id="184:80">Como faço para comprar ou vender peças no site?</p><p class="o-site-tem-parcerias-EOivTH o-site-tem-parcerias robotoslab-normal-salem-20px" data-id="184:88">O site tem parcerias com empresas ou organizações de reciclagem?</p><p class="o-site-tem-parcerias-AEtiGY o-site-tem-parcerias robotoslab-normal-salem-20px" data-id="184:92">O site tem parcerias com empresas ou organizações de reciclagem?</p><p class="quais-tipos-de-produ-EOivTH robotoslab-normal-salem-20px" data-id="184:86">Quais tipos de produtos posso comprar ou vender aqui? Há alguma restrição quanto ao estado das peças?</p><p class="quais-so-os-benefcio-EOivTH robotoslab-normal-salem-20px" data-id="184:84">Quais são os benefícios de usar este site em comparação com outras plataformas de compra e venda?</p><p class="preciso-me-cadastrar-EOivTH robotoslab-normal-salem-20px" data-id="184:82">Preciso me cadastrar para usar o site? Existe alguma restrição de quem pode se inscrever?</p><div class="rectangle-1230-EOivTH" data-id="347:11"></div><div class="perguntas-frequentes-EOivTH perguntas-frequentes-1" data-id="347:12">PERGUNTAS FREQUENTES</div><p class="ao-clicar-na-pergunt-EOivTH robotoslab-normal-black-20px" data-id="184:89">Ao clicar na pergunta te direciona para uma seção contendo informações a respeito da mesma</p><p class="uma-pgina-de-pergunt-EOivTH robotoslab-normal-black-20px" data-id="387:19">Uma página de perguntas frequentes (FAQ) em um site serve para responder às dúvidas mais comuns que os usuários possam ter. Ela organiza essas perguntas e respostas de maneira clara e acessível, permitindo que os visitantes encontrem rapidamente as informações que procuram sem a necessidade de contatar o suporte. Isso melhora a experiência do usuário, economiza tempo e reduz a demanda por atendimento ao cliente.</p><div class="rectangle-1358-EOivTH" data-id="503:49"></div><div class="navegao-EOivTH inter-normal-salem-17px" data-id="503:50">Navegação</div><div class="redes-sociais-EOivTH inter-normal-salem-17px" data-id="503:51">Redes Sociais</div><div class="contato-EOivTH inter-normal-salem-17px" data-id="503:52">Contato</div><div class="fale-conosco-EOivTH fale-conosco-1 inter-bold-black-12px" data-id="503:56">Fale Conosco</div><div class="sustentechoficialgmailcom-EOivTH inter-bold-black-12px" data-id="503:57">sustentech.oficial@gmail.com</div><div class="x13-91234-5678-EOivTH inter-bold-black-12px" data-id="503:58">(13) 91234-5678</div><div class="perguntas-frequentes-AEtiGY perguntas-frequentes-1 inter-bold-black-12px" data-id="503:59">Perguntas Frequentes</div><div class="tiktok-EOivTH inter-bold-black-12px" data-id="503:63">Tiktok</div><div class="facebook-EOivTH inter-bold-black-12px" data-id="503:64">Facebook</div><div class="instagram-EOivTH inter-bold-black-12px" data-id="503:65">Instagram</div><div class="discord-EOivTH inter-bold-black-12px" data-id="503:66">Discord</div><div class="github-EOivTH inter-bold-black-12px" data-id="503:67">Github</div><div class="rectangle-1343-EOivTH" data-id="502:3"></div><div class="rectangle-1344-EOivTH" data-id="502:11"></div><div class="clique-aqui-para-pesquisar-EOivTH inter-semi-bold-sonic-silver-9px" data-id="502:12">Clique aqui para pesquisar</div><img class="rectangle-1345-EOivTH" data-id="502:13" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/rectangle-1345.svg" alt="Rectangle 1345"><h1 class="title-EOivTH sawarabimincho-normal-salem-40px" data-id="502:40">Sobre o canal</h1><img class="do-utilizador-2-12-EOivTH" data-id="503:47" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/do-utilizador--2--12.png" alt="do-utilizador (2) 12"><img class="image-295-EOivTH image-295" data-id="503:76" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-295.png" alt="image 295"><img class="image-296-EOivTH" data-id="503:77" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-296.png" alt="image 296"><img class="image-297-EOivTH" data-id="503:78" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-297.png" alt="image 297"><img class="image-298-EOivTH" data-id="503:79" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-298.png" alt="image 298"><img class="image-299-EOivTH" data-id="503:80" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-299.png" alt="image 299"><img class="image-295-AEtiGY image-295" data-id="503:75" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-295-1.png" alt="image 295"><img class="pesquisa-de-lupa-2-7-EOivTH" data-id="503:48" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/pesquisa-de-lupa--2--7.png" alt="pesquisa-de-lupa (2) 7"><img class="line-160-EOivTH" data-id="502:39" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-160.svg" alt="Line 160"><img class="image-295-HWFFpO image-295" data-id="503:44" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/image-295-2.png" alt="image 295"><img class="line-59-EOivTH" data-id="18:228" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-59.svg" alt="Line 59"><img class="line-94-EOivTH" data-id="387:20" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-94.svg" alt="Line 94"><img class="line-161-EOivTH" data-id="503:46" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-161.svg" alt="Line 161"><img class="line-162-EOivTH" data-id="503:74" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/line-162.svg" alt="Line 162"><div class="pgina-inicial-EOivTH inter-bold-black-12px" data-id="598:1028">Página Inicial</div><a href="cadastro-de-usuarios"><div class="cadastre-se-EOivTH inter-bold-black-12px" data-id="598:1029">Cadastre-se</div></a><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-EOivTH inter-bold-black-12px" data-id="598:1030">Cadastro de Produtos</div></a><a href="produtos"><div class="produtos-EOivTH produtos-1 inter-bold-black-12px" data-id="598:1031">Produtos</div></a><a href="sobre-nos"><div class="sobre-ns-EOivTH sobre-ns inter-bold-black-12px" data-id="598:1032">Sobre Nós</div></a><a href="fale-conosco"><div class="fale-conosco-AEtiGY fale-conosco-1 inter-bold-black-12px" data-id="598:1033">Fale Conosco</div></a><a href="sugestoes"><div class="sugestes-EOivTH inter-bold-black-12px" data-id="598:1034">Sugestões</div></a><a href="perguntas-frequentes"><div class="perguntas-frequentes-HWFFpO perguntas-frequentes-1 inter-bold-black-12px" data-id="598:1035">Perguntas Frequentes</div></a><a href="locais-de-descarte"><div class="locais-de-descarte-EOivTH inter-bold-black-12px" data-id="598:1036">Locais de Descarte</div></a><img class="seta-para-baixo-2-EOivTH" data-id="598:1046" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d62259ed09e85b5a9cd6fa/releases/66d623164213ece5365641f0/img/seta-para-baixo-2.png" alt="seta-para-baixo 2"><a href="fale-conosco"><div class="fale-conosco-HWFFpO fale-conosco-1 inter-extra-bold-white-20px" data-id="598:1047">Fale Conosco</div></a><a href="locais-de-descarte"><div class="locais-de-reciclagem-EOivTH inter-extra-bold-white-20px" data-id="598:1048">Locais de Reciclagem</div></a><a href="sobre-nos"><div class="sobre-ns-AEtiGY sobre-ns inter-extra-bold-white-20px" data-id="598:1049">Sobre Nós</div></a><a href="pagina-inicial"><div class="incio-EOivTH inter-extra-bold-white-20px" data-id="598:1050">Início</div></a><a href="produtos"><div class="produtos-AEtiGY produtos-1 inter-extra-bold-white-20px" data-id="598:1051">Produtos</div></a><a href="cadastro-de-usuarios"><div class="cadastro-EOivTH inter-extra-bold-white-20px" data-id="598:1052">Cadastro</div></a></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

@@ -1,0 +1,3589 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+02/09/2024 20:57:38 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1275.0008544921875, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,800|Inter:600italic,700,600,800,400|Sawarabi+Mincho:400|Jockey+One:400|Kanit:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66d62609d21b2d52d175deae.66d62609d21b2d52d175deb1.WwRzh9a.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d9d9d9;
+  --black: #000000;
+  --coconut: #fefcfc;
+  --crusoe: #013f13;
+  --granny-smith-apple: #9cdea0;
+  --killarney: #2d673e;
+  --salem: #0d7e2e;
+  --snowy-mint: #dbfedc;
+  --sonic-silver: #727272;
+  --white: #ffffff;
+ 
+  --font-size-l: 23px;
+  --font-size-m: 20px;
+  --font-size-s: 17px;
+  --font-size-xs: 16px;
+  --font-size-xxs: 14px;
+  --font-size-xxxs: 12px;
+  --font-size-xxxxs: 11px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-jockey_one: "Jockey One", Helvetica;
+  --font-family-kanit: "Kanit", Helvetica;
+  --font-family-roboto_slab: "Roboto Slab", Helvetica;
+  --font-family-sawarabi_mincho: "Sawarabi Mincho", Helvetica;
+}
+.inter-bold-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-extra-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.inter-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-salem-17px {
+  color: var(--salem);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-sonic-silver-9px {
+  color: var(--sonic-silver);
+  font-family: var(--font-family-inter);
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.robotoslab-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-20px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-coconut-25px {
+  color: var(--coconut);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.jockeyone-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-jockey_one);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-extra-bold-killarney-10px {
+  color: var(--killarney);
+  font-family: var(--font-family-inter);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.robotoslab-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sawarabimincho-normal-salem-40px {
+  color: var(--salem);
+  font-family: var(--font-family-sawarabi_mincho);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-11px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-white-40px {
+  color: var(--white);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.robotoslab-normal-salem-45px {
+  color: var(--salem);
+  font-family: var(--font-family-roboto_slab);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-black-23px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.fale-conosco-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.image {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.image-254 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+
+/* screen - cadastro-de-produtos */
+
+.cadastro-de-produtos {
+  background-color: transparent;
+  height: 2480px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1-9l6jeH {
+  background-color: transparent;
+  height: 2055px;
+  left: 0px;
+  position: absolute;
+  top: 84px;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1350-9l6jeH {
+  background-color: var(--snowy-mint);
+  height: 339px;
+  left: 2px;
+  position: absolute;
+  top: 2139px;
+  width: 1286px;
+}
+
+.cadastro-de-produtos .rectangle-1352-9l6jeH {
+  background-color: var(--alto);
+  height: 168px;
+  left: 706px;
+  position: absolute;
+  top: 1858px;
+  transform: rotate(0.15deg);
+  width: 192px;
+}
+
+.cadastro-de-produtos .image-267-9l6jeH {
+  background-color: transparent;
+  height: 150px;
+  left: 717px;
+  object-fit: cover;
+  position: absolute;
+  top: 1865px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .rectangle-1353-9l6jeH {
+  background-color: var(--alto);
+  height: 168px;
+  left: 395px;
+  position: absolute;
+  top: 1855px;
+  transform: rotate(0.15deg);
+  width: 192px;
+}
+
+.cadastro-de-produtos .image-268-9l6jeH {
+  background-color: transparent;
+  height: 150px;
+  left: 406px;
+  object-fit: cover;
+  position: absolute;
+  top: 1862px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .line-85-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 1283px;
+}
+
+.cadastro-de-produtos .title-9l6jeH {
+  background-color: transparent;
+  color: #0b6525;
+  font-family: var(--font-family-inter);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 206px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 149px;
+  white-space: nowrap;
+  width: 344px;
+}
+
+.cadastro-de-produtos .line-62-9l6jeH {
+  background-color: transparent;
+  height: 10px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 475px;
+  width: 1284px;
+}
+
+.cadastro-de-produtos .rectangle-47-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 615px;
+  width: 432px;
+}
+
+.cadastro-de-produtos .rectangle-50-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 712px;
+  width: 433px;
+}
+
+.cadastro-de-produtos .rectangle-55-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 683px;
+  position: absolute;
+  top: 712px;
+  width: 407px;
+}
+
+.cadastro-de-produtos .rectangle-56-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 810px;
+  width: 433px;
+}
+
+.cadastro-de-produtos .rectangle-57-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 683px;
+  position: absolute;
+  top: 810px;
+  width: 407px;
+}
+
+.cadastro-de-produtos .rectangle-48-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 684px;
+  position: absolute;
+  top: 613px;
+  width: 406px;
+}
+
+.cadastro-de-produtos .nome-do-produto-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 194px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 579px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .descrio-do-produto-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 683px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 768px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .condio-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 195px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 769px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .modelo-9l6jeH {
+  left: 684px;
+  top: 676px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .data-da-compra-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 194px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 675px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .marca-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 683px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 580px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .line-68-9l6jeH {
+  background-color: transparent;
+  height: 13px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 906px;
+  width: 1284px;
+}
+
+.cadastro-de-produtos .rectangle-1343-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1069px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .preo-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1400px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .descrio-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1492px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 169px;
+}
+
+.cadastro-de-produtos .rectangle-228-9l6jeH {
+  background-color: var(--alto);
+  height: 248px;
+  left: 491px;
+  position: absolute;
+  top: 1813px;
+  transform: rotate(0.15deg);
+  width: 283px;
+}
+
+.cadastro-de-produtos .insira-uma-ou-mais-imagens-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1768px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .nome-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1027px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1344-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1161px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .modelo-fB8Kq2 {
+  left: 217px;
+  top: 1119px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1345-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1261px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .estado-de-uso-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1219px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1346-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1353px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .ano-de-fabricao-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1311px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1348-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1537px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .informaes-do-vendedor-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1584px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 274px;
+}
+
+.cadastro-de-produtos .rectangle-1349-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1629px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .contato-9l6jeH {
+  left: 217px;
+  text-align: left;
+  top: 1670px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 274px;
+}
+
+.cadastro-de-produtos .rectangle-1351-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1715px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .rectangle-1347-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1445px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .rectangle-230-9l6jeH {
+  background-color: var(--salem);
+  height: 46px;
+  left: 517px;
+  position: absolute;
+  top: 2073px;
+  width: 225px;
+}
+
+.cadastro-de-produtos .anunciar-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 574px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2077px;
+  width: 184px;
+}
+
+.cadastro-de-produtos .image-163-9l6jeH {
+  background-color: transparent;
+  height: 220px;
+  left: 507px;
+  object-fit: cover;
+  position: absolute;
+  top: 1824px;
+  width: 252px;
+}
+
+.cadastro-de-produtos .rectangle-1221-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 535px;
+  position: absolute;
+  top: 138px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1222-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 842px;
+  position: absolute;
+  top: 138px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1223-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 850px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1224-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 535px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1220-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 220px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .image-192-9l6jeH {
+  height: 112px;
+  left: 863px;
+  top: 131px;
+  width: 112px;
+}
+
+.cadastro-de-produtos .image-192-fB8Kq2 {
+  height: 92px;
+  left: 547px;
+  top: 154px;
+  width: 95px;
+}
+
+.cadastro-de-produtos .image-192-DhGg5p {
+  height: 154px;
+  left: 210px;
+  top: 302px;
+  width: 130px;
+}
+
+.cadastro-de-produtos .image-192-MDKFsc {
+  height: 104px;
+  left: 863px;
+  top: 335px;
+  width: 96px;
+}
+
+.cadastro-de-produtos .smartphones-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 648px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 167px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .notebooks-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 975px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 177px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .fones-de-ouvido-e-headsets-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 949px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .desktops-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 679px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 366px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .t-vs-e-monitores-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 328px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 363px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .correto-2-1-9l6jeH {
+  background-color: transparent;
+  height: 45px;
+  left: 698px;
+  object-fit: cover;
+  position: absolute;
+  top: 215px;
+  width: 45px;
+}
+
+.cadastro-de-produtos .line-143-9l6jeH {
+  background-color: transparent;
+  height: 2478px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.cadastro-de-produtos .rectangle-1234-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 46px;
+  left: 491px;
+  position: absolute;
+  top: 954px;
+  width: 308px;
+}
+
+.cadastro-de-produtos .rectangle-1354-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 46px;
+  left: 356px;
+  position: absolute;
+  top: 518px;
+  width: 518px;
+}
+
+.cadastro-de-produtos .rectangle-1343-fB8Kq2 {
+  background-color: var(--salem);
+  height: 85px;
+  left: 2px;
+  position: absolute;
+  top: 0px;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1344-fB8Kq2 {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 31px;
+  left: 999px;
+  position: absolute;
+  top: 27px;
+  width: 196px;
+}
+
+.cadastro-de-produtos .clique-aqui-para-pesquisar-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1015px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 36px;
+  width: 246px;
+}
+
+.cadastro-de-produtos .rectangle-1345-fB8Kq2 {
+  background-color: transparent;
+  height: 31px;
+  left: 1203px;
+  position: absolute;
+  top: 27px;
+  width: 58px;
+}
+
+.cadastro-de-produtos .navegao-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1035px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 2176px;
+  width: 159px;
+}
+
+.cadastro-de-produtos .redes-sociais-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 727px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 2175px;
+  width: 162px;
+}
+
+.cadastro-de-produtos .contato-fB8Kq2 {
+  left: 386px;
+  mix-blend-mode: darken;
+  text-align: center;
+  top: 2182px;
+  width: 162px;
+}
+
+.cadastro-de-produtos .fale-conosco-9l6jeH {
+  left: 418px;
+  top: 2305px;
+  width: 133px;
+}
+
+.cadastro-de-produtos .sustentechoficialgmailcom-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 418px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2268px;
+  width: 280px;
+}
+
+.cadastro-de-produtos .x13-91234-5678-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 418px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2227px;
+  width: 158px;
+}
+
+.cadastro-de-produtos .perguntas-frequentes-9l6jeH {
+  left: 418px;
+  top: 2339px;
+  width: 193px;
+}
+
+.cadastro-de-produtos .tiktok-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2317px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.cadastro-de-produtos .facebook-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2271px;
+  width: 92px;
+}
+
+.cadastro-de-produtos .instagram-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2227px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .discord-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2369px;
+  width: 66px;
+}
+
+.cadastro-de-produtos .github-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2413px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.cadastro-de-produtos .anncio-9l6jeH {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 605px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 964px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .image-260-9l6jeH {
+  background-color: transparent;
+  height: 128px;
+  left: 547px;
+  object-fit: cover;
+  position: absolute;
+  top: 322px;
+  width: 128px;
+}
+
+.cadastro-de-produtos .line-102-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 2138px;
+  width: 1285px;
+}
+
+.cadastro-de-produtos .line-149-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 2478px;
+  width: 1287px;
+}
+
+.cadastro-de-produtos .line-144-9l6jeH {
+  background-color: transparent;
+  height: 2480px;
+  left: 1283px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 5px;
+}
+
+.cadastro-de-produtos .por-favor-responda-o-segunte-formulrio-9l6jeH {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 375px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 525px;
+  white-space: nowrap;
+  width: 522px;
+}
+
+.cadastro-de-produtos .image-269-9l6jeH {
+  background-color: transparent;
+  height: 242px;
+  left: 97px;
+  object-fit: cover;
+  position: absolute;
+  top: 2179px;
+  width: 194px;
+}
+
+.cadastro-de-produtos .image-270-9l6jeH {
+  background-color: transparent;
+  height: 39px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2267px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-271-9l6jeH {
+  background-color: transparent;
+  height: 39px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2313px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-272-9l6jeH {
+  background-color: transparent;
+  height: 40px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2218px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-273-9l6jeH {
+  background-color: transparent;
+  height: 36px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2406px;
+  width: 36px;
+}
+
+.cadastro-de-produtos .image-274-9l6jeH {
+  background-color: transparent;
+  height: 27px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2367px;
+  width: 36px;
+}
+
+.cadastro-de-produtos .do-utilizador-2-8-9l6jeH {
+  background-color: transparent;
+  height: 59px;
+  left: 33px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 60px;
+}
+
+.cadastro-de-produtos .pesquisa-de-lupa-2-2-9l6jeH {
+  background-color: transparent;
+  height: 23px;
+  left: 1220px;
+  object-fit: cover;
+  position: absolute;
+  top: 31px;
+  width: 23px;
+}
+
+.cadastro-de-produtos .seta-para-baixo-2-9l6jeH {
+  background-color: transparent;
+  height: 33px;
+  left: 937px;
+  object-fit: cover;
+  position: absolute;
+  top: 27px;
+  width: 42px;
+}
+
+.cadastro-de-produtos .fale-conosco-fB8Kq2 {
+  cursor: pointer;
+  left: 556px;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .locais-de-reciclagem-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 715px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .sobre-ns-9l6jeH {
+  left: 429px;
+  top: 30px;
+  width: auto;
+}
+
+.cadastro-de-produtos .incio-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 112px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .produtos-9l6jeH {
+  left: 196px;
+  top: 30px;
+  width: auto;
+}
+
+.cadastro-de-produtos .cadastro-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 312px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .pgina-inicial-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1068px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2218px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .cadastre-se-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1068px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2246px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .cadastro-de-produtos-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2274px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.cadastro-de-produtos .produtos-fB8Kq2 {
+  left: 1069px;
+  top: 2302px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .sobre-ns-fB8Kq2 {
+  left: 1069px;
+  top: 2330px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .fale-conosco-DhGg5p {
+  cursor: pointer;
+  left: 1069px;
+  top: 2358px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .sugestes-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2386px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .perguntas-frequentes-fB8Kq2 {
+  cursor: pointer;
+  left: 1069px;
+  top: 2414px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.cadastro-de-produtos .locais-de-descarte-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2442px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.cadastro-de-produtos .contato {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.cadastro-de-produtos .image-192 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.cadastro-de-produtos .modelo {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.cadastro-de-produtos .perguntas-frequentes-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.cadastro-de-produtos .produtos-1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cadastro-de-produtos .sobre-ns {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+/* screen - produtos */
+
+.produtos {
+  background-color: transparent;
+  height: 1002px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1275.0px;
+}
+
+.produtos .rectangle-1355-TgPtAU {
+  background-color: transparent;
+  height: 617px;
+  left: 2px;
+  position: absolute;
+  top: 80px;
+  width: 1272px;
+}
+
+.produtos .rectangle-13-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 460px;
+  position: absolute;
+  top: 110px;
+  width: 184px;
+}
+
+.produtos .rectangle-1059-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 715px;
+  position: absolute;
+  top: 111px;
+  width: 184px;
+}
+
+.produtos .rectangle-1065-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 715px;
+  position: absolute;
+  top: 311px;
+  width: 184px;
+}
+
+.produtos .rectangle-1063-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 460px;
+  position: absolute;
+  top: 311px;
+  width: 184px;
+}
+
+.produtos .rectangle-1061-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 957px;
+  position: absolute;
+  top: 110px;
+  width: 184px;
+}
+
+.produtos .rectangle-1067-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 957px;
+  position: absolute;
+  top: 311px;
+  width: 184px;
+}
+
+.produtos .rectangle-1058-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 460px;
+  position: absolute;
+  top: 243px;
+  width: 184px;
+}
+
+.produtos .rectangle-1060-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 715px;
+  position: absolute;
+  top: 245px;
+  width: 184px;
+}
+
+.produtos .rectangle-1066-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 715px;
+  position: absolute;
+  top: 446px;
+  width: 184px;
+}
+
+.produtos .rectangle-1064-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 460px;
+  position: absolute;
+  top: 446px;
+  width: 184px;
+}
+
+.produtos .rectangle-1062-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 957px;
+  position: absolute;
+  top: 243px;
+  width: 184px;
+}
+
+.produtos .rectangle-1068-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 957px;
+  position: absolute;
+  top: 446px;
+  width: 184px;
+}
+
+.produtos .line-11-TgPtAU {
+  background-color: transparent;
+  height: 7px;
+  left: 329px;
+  object-fit: cover;
+  position: absolute;
+  top: 296px;
+  width: 945px;
+}
+
+.produtos .line-12-TgPtAU {
+  background-color: transparent;
+  height: 4px;
+  left: 329px;
+  object-fit: cover;
+  position: absolute;
+  top: 495px;
+  width: 945px;
+}
+
+.produtos .mouse-r-2250-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 497px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 246px;
+  width: 108px;
+}
+
+.produtos .celular-r-220000-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 755px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 246px;
+  width: 108px;
+}
+
+.produtos .processador-amd-ryzen-r-135900-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 730px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 447px;
+  width: 153px;
+}
+
+.produtos .monitor-r-72000-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 995px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 246px;
+  width: 108px;
+}
+
+.produtos .rectangle-1231-TgPtAU {
+  background-color: var(--white);
+  height: 108px;
+  left: 724px;
+  position: absolute;
+  top: 116px;
+  width: 164px;
+}
+
+.produtos .image-203-TgPtAU {
+  background-color: transparent;
+  height: 105px;
+  left: 723px;
+  object-fit: cover;
+  position: absolute;
+  top: 319px;
+  width: 167px;
+}
+
+.produtos .rectangle-1232-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 460px;
+  position: absolute;
+  top: 514px;
+  width: 184px;
+}
+
+.produtos .rectangle-1233-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 715px;
+  position: absolute;
+  top: 514px;
+  width: 184px;
+}
+
+.produtos .rectangle-1234-TgPtAU {
+  background-color: var(--salem);
+  height: 120px;
+  left: 957px;
+  position: absolute;
+  top: 514px;
+  width: 184px;
+}
+
+.produtos .rectangle-1235-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 460px;
+  position: absolute;
+  top: 649px;
+  width: 184px;
+}
+
+.produtos .rectangle-1236-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 715px;
+  position: absolute;
+  top: 649px;
+  width: 184px;
+}
+
+.produtos .rectangle-1237-TgPtAU {
+  background-color: var(--salem);
+  height: 34px;
+  left: 957px;
+  position: absolute;
+  top: 649px;
+  width: 184px;
+}
+
+.produtos .headseat-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 729px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 656px;
+  width: 153px;
+}
+
+.produtos .image-TgPtAU {
+  height: 113px;
+  left: 497px;
+  top: 314px;
+  width: 102px;
+}
+
+.produtos .laptop-with-blank-bl-TgPtAU {
+  background-color: transparent;
+  height: 105px;
+  left: 470px;
+  object-fit: cover;
+  position: absolute;
+  top: 522px;
+  width: 162px;
+}
+
+.produtos .notebook-seminovo-dell-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 469px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 656px;
+  width: 175px;
+}
+
+.produtos .cpu-positivo-4-gb-de-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 471px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 447px;
+  width: auto;
+}
+
+.produtos .tv-resoluo-boa-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 997px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 655px;
+  width: auto;
+}
+
+.produtos .tela-de-macbook-r-66720-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 971px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 450px;
+  width: 158px;
+}
+
+.produtos .image-199-TgPtAU {
+  background-color: transparent;
+  height: 104px;
+  left: 473px;
+  position: absolute;
+  top: 116px;
+  width: 160px;
+}
+
+.produtos .image-201-TgPtAU {
+  background-color: transparent;
+  height: 100px;
+  left: 969px;
+  object-fit: cover;
+  position: absolute;
+  top: 120px;
+  width: 162px;
+}
+
+.produtos .image-202-TgPtAU {
+  background-color: transparent;
+  height: 104px;
+  left: 754px;
+  object-fit: cover;
+  position: absolute;
+  top: 120px;
+  width: 104px;
+}
+
+.produtos .image-204-TgPtAU {
+  background-color: transparent;
+  height: 101px;
+  left: 969px;
+  object-fit: cover;
+  position: absolute;
+  top: 320px;
+  width: 162px;
+}
+
+.produtos .image-d8opMZ {
+  height: 101px;
+  left: 969px;
+  top: 523px;
+  width: 162px;
+}
+
+.produtos .line-140-TgPtAU {
+  background-color: transparent;
+  height: 615px;
+  left: 328px;
+  object-fit: cover;
+  position: absolute;
+  top: 81px;
+  width: 1px;
+}
+
+.produtos .rectangle-1343-TgPtAU {
+  background-color: var(--salem);
+  height: 85px;
+  left: 1px;
+  position: absolute;
+  top: 0px;
+  width: 1273px;
+}
+
+.produtos .rectangle-1344-TgPtAU {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 31px;
+  left: 997px;
+  position: absolute;
+  top: 26px;
+  width: 196px;
+}
+
+.produtos .clique-aqui-para-pesquisar-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 1014px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 35px;
+  width: 244px;
+}
+
+.produtos .rectangle-1345-TgPtAU {
+  background-color: transparent;
+  height: 31px;
+  left: 1202px;
+  position: absolute;
+  top: 26px;
+  width: 56px;
+}
+
+.produtos .rectangle-1356-TgPtAU {
+  background-color: var(--snowy-mint);
+  height: 305px;
+  left: 1px;
+  position: absolute;
+  top: 696px;
+  width: 1273px;
+}
+
+.produtos .navegao-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 1014px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 722px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.produtos .redes-sociais-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 727px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 729px;
+  width: 158px;
+}
+
+.produtos .contato-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 378px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 735px;
+  width: 160px;
+}
+
+.produtos .fale-conosco-TgPtAU {
+  left: 410px;
+  top: 846px;
+  width: 130px;
+}
+
+.produtos .sustentechoficialgmailcom-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 813px;
+  width: 276px;
+}
+
+.produtos .x13-91234-5678-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 410px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 776px;
+  width: 157px;
+}
+
+.produtos .perguntas-frequentes-TgPtAU {
+  left: 410px;
+  top: 876px;
+  width: 188px;
+}
+
+.produtos .tiktok-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 804px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 857px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.produtos .facebook-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 804px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 815px;
+  white-space: nowrap;
+  width: 89px;
+}
+
+.produtos .instagram-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 804px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 776px;
+  width: 85px;
+}
+
+.produtos .discord-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 804px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 903px;
+  white-space: nowrap;
+  width: 64px;
+}
+
+.produtos .github-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 804px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 943px;
+  white-space: nowrap;
+  width: 101px;
+}
+
+.produtos .pesquisa-de-lupa-2-3-TgPtAU {
+  background-color: transparent;
+  height: 23px;
+  left: 1218px;
+  object-fit: cover;
+  position: absolute;
+  top: 31px;
+  width: 23px;
+}
+
+.produtos .do-utilizador-2-9-TgPtAU {
+  background-color: transparent;
+  height: 59px;
+  left: 19px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 60px;
+}
+
+.produtos .image-275-TgPtAU {
+  background-color: transparent;
+  height: 107px;
+  left: 723px;
+  object-fit: cover;
+  position: absolute;
+  top: 520px;
+  width: 167px;
+}
+
+.produtos .line-93-TgPtAU {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: -0px;
+  width: 1274px;
+}
+
+.produtos .line-152-TgPtAU {
+  background-color: transparent;
+  height: 1000px;
+  left: 1274px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.produtos .rectangle-1355-d8opMZ {
+  background-color: var(--salem);
+  height: 376px;
+  left: 49px;
+  position: absolute;
+  top: 198px;
+  width: 232px;
+}
+
+.produtos .flex-container-38365-TgPtAU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 275px;
+  left: 137px;
+  position: absolute;
+  top: 258px;
+  width: 113px;
+}
+
+.produtos .text0-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span0-8xNkJa {
+}
+
+.produtos .text1-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span1-Bv43W7 {
+}
+
+.produtos .text2-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span2-qygxIo {
+}
+
+.produtos .text3-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span3-gYmgio {
+}
+
+.produtos .text4-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span4-dHxzxA {
+}
+
+.produtos .text5-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span5-sxgInm {
+}
+
+.produtos .text6-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span6-zgecPP {
+}
+
+.produtos .text7-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span7-u9SxmV {
+}
+
+.produtos .text8-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span8-PnwFGh {
+}
+
+.produtos .text9-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span9-F9W3oI {
+}
+
+.produtos .text10-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span10-oBiY8c {
+}
+
+.produtos .text11-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span11-14053q {
+}
+
+.produtos .text12-38365-FBQX3E {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.produtos .span12-6vDSi7 {
+}
+
+.produtos .filtro-de-pesquisa-TgPtAU {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 67px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 223px;
+  width: 156px;
+}
+
+.produtos .filtro-1-TgPtAU {
+  background-color: transparent;
+  height: 32px;
+  left: 223px;
+  object-fit: cover;
+  position: absolute;
+  top: 215px;
+  width: 32px;
+}
+
+.produtos .check-in-quadrangular-1-TgPtAU {
+  background-color: transparent;
+  height: 32px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 268px;
+  width: 43px;
+}
+
+.produtos .pare-4-TgPtAU {
+  background-color: transparent;
+  height: 39px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 319px;
+  width: 45px;
+}
+
+.produtos .pare-6-TgPtAU {
+  background-color: transparent;
+  height: 39px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 371px;
+  width: 45px;
+}
+
+.produtos .pare-7-TgPtAU {
+  background-color: transparent;
+  height: 39px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 419px;
+  width: 45px;
+}
+
+.produtos .pare-8-TgPtAU {
+  background-color: transparent;
+  height: 39px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 471px;
+  width: 45px;
+}
+
+.produtos .pare-9-TgPtAU {
+  background-color: transparent;
+  height: 39px;
+  left: 77px;
+  object-fit: cover;
+  position: absolute;
+  top: 523px;
+  width: 45px;
+}
+
+.produtos .line-83-TgPtAU {
+  background-color: transparent;
+  height: 1001px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.produtos .line-153-TgPtAU {
+  background-color: transparent;
+  height: 2px;
+  left: -0px;
+  object-fit: cover;
+  position: absolute;
+  top: 1000px;
+  width: 1275px;
+}
+
+.produtos .line-149-TgPtAU {
+  background-color: transparent;
+  height: 2px;
+  left: -0px;
+  object-fit: cover;
+  position: absolute;
+  top: 695px;
+  width: 1275px;
+}
+
+.produtos .image-276-TgPtAU {
+  background-color: transparent;
+  height: 242px;
+  left: 79px;
+  object-fit: cover;
+  position: absolute;
+  top: 719px;
+  width: 194px;
+}
+
+.produtos .image-277-TgPtAU {
+  background-color: transparent;
+  height: 34px;
+  left: 754px;
+  object-fit: cover;
+  position: absolute;
+  top: 808px;
+  width: 35px;
+}
+
+.produtos .image-278-TgPtAU {
+  background-color: transparent;
+  height: 33px;
+  left: 756px;
+  object-fit: cover;
+  position: absolute;
+  top: 849px;
+  width: 33px;
+}
+
+.produtos .image-279-TgPtAU {
+  background-color: transparent;
+  height: 34px;
+  left: 754px;
+  object-fit: cover;
+  position: absolute;
+  top: 768px;
+  width: 35px;
+}
+
+.produtos .image-280-TgPtAU {
+  background-color: transparent;
+  height: 35px;
+  left: 755px;
+  object-fit: cover;
+  position: absolute;
+  top: 931px;
+  width: 35px;
+}
+
+.produtos .image-281-TgPtAU {
+  background-color: transparent;
+  height: 26px;
+  left: 754px;
+  object-fit: cover;
+  position: absolute;
+  top: 893px;
+  width: 36px;
+}
+
+.produtos .seta-para-baixo-2-TgPtAU {
+  background-color: transparent;
+  height: 33px;
+  left: 931px;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 42px;
+}
+
+.produtos .fale-conosco-d8opMZ {
+  cursor: pointer;
+  left: 550px;
+  top: 28px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.produtos .locais-de-reciclagem-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 709px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 28px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.produtos .sobre-ns-TgPtAU {
+  left: 423px;
+  top: 28px;
+  width: auto;
+}
+
+.produtos .incio-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 106px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 28px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.produtos .produtos-TgPtAU {
+  left: 190px;
+  top: 28px;
+  width: auto;
+}
+
+.produtos .cadastro-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 306px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 28px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.produtos .pgina-inicial-TgPtAU {
+  background-color: transparent;
+  height: auto;
+  left: 1050px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 757px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.produtos .cadastre-se-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1050px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 784px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.produtos .cadastro-de-produtos-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1051px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 809px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.produtos .produtos-d8opMZ {
+  left: 1051px;
+  top: 835px;
+  width: 88px;
+}
+
+.produtos .sobre-ns-d8opMZ {
+  left: 1051px;
+  top: 863px;
+  width: 88px;
+}
+
+.produtos .fale-conosco-wjyOhI {
+  cursor: pointer;
+  left: 1051px;
+  top: 891px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.produtos .sugestes-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1051px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 919px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.produtos .perguntas-frequentes-d8opMZ {
+  cursor: pointer;
+  left: 1051px;
+  top: 944px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.produtos .locais-de-descarte-TgPtAU {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1051px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 971px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.produtos .perguntas-frequentes-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.produtos .produtos-1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.produtos .sobre-ns {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+/* screen - sobre-nos */
+
+.sobre-nos {
+  background-color: transparent;
+  height: 1667px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1286.15px;
+}
+
+.sobre-nos .rectangle-1276-FfZDN2 {
+  background-color: var(--snowy-mint);
+  height: 335px;
+  left: 0px;
+  position: absolute;
+  top: 1332px;
+  width: 1285px;
+}
+
+.sobre-nos .rectangle-1275-FfZDN2 {
+  background-color: transparent;
+  height: 1252px;
+  left: 1px;
+  position: absolute;
+  top: 78px;
+  width: 1284px;
+}
+
+.sobre-nos .rectangle-1057-FfZDN2 {
+  background-color: transparent;
+  height: 156px;
+  left: -2618px;
+  position: absolute;
+  top: 918px;
+  width: 919px;
+}
+
+.sobre-nos .line-52-FfZDN2 {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 1331px;
+  width: 1284px;
+}
+
+.sobre-nos .line-155-FfZDN2 {
+  background-color: transparent;
+  height: 5px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 1662px;
+  width: 1285px;
+}
+
+.sobre-nos .line-92-FfZDN2 {
+  background-color: transparent;
+  height: 1667px;
+  left: 1285px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.sobre-nos .line-35-FfZDN2 {
+  background-color: transparent;
+  height: 13px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 884px;
+  width: 1284px;
+}
+
+.sobre-nos .line-94-FfZDN2 {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 455px;
+  width: 1284px;
+}
+
+.sobre-nos .histria-do-projeto-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 635px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 556px;
+  width: 392px;
+}
+
+.sobre-nos .origem-dos-nomes-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 256px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 128px;
+  width: 439px;
+}
+
+.sobre-nos .o-projeto-unificado-FfZDN2 {
+  background-color: transparent;
+  color: var(--killarney);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 73px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 215px;
+  width: 647px;
+}
+
+.sobre-nos .o-projeto-sustentech-FfZDN2 {
+  background-color: transparent;
+  color: var(--killarney);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 533px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 630px;
+  width: 612px;
+}
+
+.sobre-nos .image-205-FfZDN2 {
+  background-color: transparent;
+  height: 290px;
+  left: 858px;
+  object-fit: cover;
+  position: absolute;
+  top: 129px;
+  width: 237px;
+}
+
+.sobre-nos .image-206-FfZDN2 {
+  background-color: transparent;
+  height: 280px;
+  left: 193px;
+  object-fit: cover;
+  position: absolute;
+  top: 527px;
+  width: 234px;
+}
+
+.sobre-nos .image-195-FfZDN2 {
+  background-color: transparent;
+  height: 135px;
+  left: 149px;
+  object-fit: cover;
+  position: absolute;
+  top: 931px;
+  width: 131px;
+}
+
+.sobre-nos .image-196-FfZDN2 {
+  background-color: transparent;
+  height: 128px;
+  left: 565px;
+  object-fit: cover;
+  position: absolute;
+  top: 934px;
+  width: 128px;
+}
+
+.sobre-nos .image-194-FfZDN2 {
+  background-color: transparent;
+  height: 140px;
+  left: 960px;
+  object-fit: cover;
+  position: absolute;
+  top: 924px;
+  width: 144px;
+}
+
+.sobre-nos .title-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 947px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1098px;
+  width: 221px;
+}
+
+.sobre-nos .viso-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 565px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1088px;
+  white-space: nowrap;
+  width: 155px;
+}
+
+.sobre-nos .misso-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 149px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1092px;
+  white-space: nowrap;
+  width: 161px;
+}
+
+.sobre-nos .mitigar-os-problemas-FfZDN2 {
+  background-color: transparent;
+  color: #0b6525;
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 131px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1172px;
+  width: 176px;
+}
+
+.sobre-nos .estabelecer-se-como-FfZDN2 {
+  background-color: transparent;
+  color: var(--crusoe);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 553px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1164px;
+  width: 193px;
+}
+
+.sobre-nos .inovao-utilizar-meno-FfZDN2 {
+  background-color: transparent;
+  color: var(--crusoe);
+  font-family: var(--font-family-roboto_slab);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 935px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1168px;
+  width: 208px;
+}
+
+.sobre-nos .rectangle-1343-FfZDN2 {
+  background-color: var(--salem);
+  height: 85px;
+  left: 1px;
+  position: absolute;
+  top: 0px;
+  width: 1284px;
+}
+
+.sobre-nos .rectangle-1344-FfZDN2 {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 31px;
+  left: 997px;
+  position: absolute;
+  top: 25px;
+  width: 198px;
+}
+
+.sobre-nos .clique-aqui-para-pesquisar-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 1014px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 34px;
+  width: 247px;
+}
+
+.sobre-nos .rectangle-1345-FfZDN2 {
+  background-color: transparent;
+  height: 31px;
+  left: 1203px;
+  position: absolute;
+  top: 25px;
+  width: 58px;
+}
+
+.sobre-nos .image-260-FfZDN2 {
+  background-color: transparent;
+  height: 242px;
+  left: 99px;
+  object-fit: cover;
+  position: absolute;
+  top: 1361px;
+  width: 194px;
+}
+
+.sobre-nos .image-261-FfZDN2 {
+  background-color: transparent;
+  height: 39px;
+  left: 752px;
+  object-fit: cover;
+  position: absolute;
+  top: 1463px;
+  width: 39px;
+}
+
+.sobre-nos .image-262-FfZDN2 {
+  background-color: transparent;
+  height: 39px;
+  left: 752px;
+  object-fit: cover;
+  position: absolute;
+  top: 1509px;
+  width: 39px;
+}
+
+.sobre-nos .image-263-FfZDN2 {
+  background-color: transparent;
+  height: 40px;
+  left: 752px;
+  object-fit: cover;
+  position: absolute;
+  top: 1414px;
+  width: 39px;
+}
+
+.sobre-nos .image-264-FfZDN2 {
+  background-color: transparent;
+  height: 36px;
+  left: 752px;
+  object-fit: cover;
+  position: absolute;
+  top: 1602px;
+  width: 36px;
+}
+
+.sobre-nos .image-265-FfZDN2 {
+  background-color: transparent;
+  height: 27px;
+  left: 752px;
+  object-fit: cover;
+  position: absolute;
+  top: 1563px;
+  width: 36px;
+}
+
+.sobre-nos .navegao-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 1050px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1371px;
+  width: 160px;
+}
+
+.sobre-nos .redes-sociais-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 722px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1364px;
+  width: 159px;
+}
+
+.sobre-nos .contato-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 381px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 1371px;
+  width: 161px;
+}
+
+.sobre-nos .fale-conosco-FfZDN2 {
+  left: 413px;
+  top: 1494px;
+  width: 132px;
+}
+
+.sobre-nos .sustentechoficialgmailcom-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 413px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1457px;
+  width: 279px;
+}
+
+.sobre-nos .x13-91234-5678-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 413px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1416px;
+  width: 158px;
+}
+
+.sobre-nos .perguntas-frequentes-FfZDN2 {
+  left: 413px;
+  top: 1528px;
+  width: 190px;
+}
+
+.sobre-nos .tiktok-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1506px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.sobre-nos .facebook-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1460px;
+  width: 90px;
+}
+
+.sobre-nos .instagram-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1416px;
+  width: 86px;
+}
+
+.sobre-nos .discord-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1558px;
+  width: 65px;
+}
+
+.sobre-nos .github-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1602px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.sobre-nos .do-utilizador-2-10-FfZDN2 {
+  background-color: transparent;
+  height: 59px;
+  left: 13px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 60px;
+}
+
+.sobre-nos .pesquisa-de-lupa-2-4-FfZDN2 {
+  background-color: transparent;
+  height: 23px;
+  left: 1220px;
+  object-fit: cover;
+  position: absolute;
+  top: 30px;
+  width: 23px;
+}
+
+.sobre-nos .line-95-FfZDN2 {
+  background-color: transparent;
+  height: 1667px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 2px;
+}
+
+.sobre-nos .line-154-FfZDN2 {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 1285px;
+}
+
+.sobre-nos .seta-para-baixo-2-FfZDN2 {
+  background-color: transparent;
+  height: 33px;
+  left: 926px;
+  object-fit: cover;
+  position: absolute;
+  top: 27px;
+  width: 42px;
+}
+
+.sobre-nos .fale-conosco-lKzukU {
+  cursor: pointer;
+  left: 545px;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.sobre-nos .locais-de-reciclagem-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 704px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.sobre-nos .sobre-ns-FfZDN2 {
+  left: 418px;
+  top: 30px;
+  width: auto;
+}
+
+.sobre-nos .incio-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 101px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.sobre-nos .produtos-FfZDN2 {
+  left: 185px;
+  top: 30px;
+  width: auto;
+}
+
+.sobre-nos .cadastro-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 301px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.sobre-nos .pgina-inicial-FfZDN2 {
+  background-color: transparent;
+  height: auto;
+  left: 1087px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1404px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.sobre-nos .cadastre-se-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1087px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1431px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.sobre-nos .cadastro-de-produtos-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1456px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.sobre-nos .produtos-lKzukU {
+  left: 1088px;
+  top: 1482px;
+  width: 88px;
+}
+
+.sobre-nos .sobre-ns-lKzukU {
+  left: 1088px;
+  top: 1510px;
+  width: 88px;
+}
+
+.sobre-nos .fale-conosco-604npO {
+  cursor: pointer;
+  left: 1088px;
+  top: 1538px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.sobre-nos .sugestes-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1566px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.sobre-nos .perguntas-frequentes-lKzukU {
+  cursor: pointer;
+  left: 1088px;
+  top: 1591px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.sobre-nos .locais-de-descarte-FfZDN2 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1088px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1618px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.sobre-nos .perguntas-frequentes-1 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.sobre-nos .produtos-1 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.sobre-nos .sobre-ns {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1281px) {
+  .screen.cadastro-de-produtos { 
+    display: none;
+   }
+  .screen.sobre-nos { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1282px) and (max-width: 1285.1544189453125px) {
+  .screen.produtos { 
+    display: none;
+   }
+  .screen.sobre-nos { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1286.1544189453125px) {
+  .screen.produtos { 
+    display: none;
+   }
+  .screen.cadastro-de-produtos { 
+    display: none;
+   }
+}</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="sobre-nos"><div class="container-center-horizontal"><div class="produtos screen " data-id="497:153"><img class="rectangle-1355-TgPtAU" data-id="497:152" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1355.svg" alt="Rectangle 1355"><div class="rectangle-13-TgPtAU" data-id="2:109"></div><div class="rectangle-1059-TgPtAU" data-id="354:27"></div><div class="rectangle-1065-TgPtAU" data-id="355:33"></div><div class="rectangle-1063-TgPtAU" data-id="355:31"></div><div class="rectangle-1061-TgPtAU" data-id="354:29"></div><div class="rectangle-1067-TgPtAU" data-id="355:35"></div><div class="rectangle-1058-TgPtAU" data-id="352:25"></div><div class="rectangle-1060-TgPtAU" data-id="354:28"></div><div class="rectangle-1066-TgPtAU" data-id="355:34"></div><div class="rectangle-1064-TgPtAU" data-id="355:32"></div><div class="rectangle-1062-TgPtAU" data-id="354:30"></div><div class="rectangle-1068-TgPtAU" data-id="355:36"></div><img class="line-11-TgPtAU" data-id="2:129" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-11.svg" alt="Line 11"><img class="line-12-TgPtAU" data-id="2:130" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-12.svg" alt="Line 12"><div class="mouse-r-2250-TgPtAU inter-normal-white-12px" data-id="352:26">Mouse<br>R$ 22,50</div><div class="celular-r-220000-TgPtAU inter-normal-white-12px" data-id="355:46">Celular<br>R$ 2200,00</div><div class="processador-amd-ryzen-r-135900-TgPtAU inter-normal-white-12px" data-id="356:55">Processador AMD Ryzen<br>R$ 1359,00</div><div class="monitor-r-72000-TgPtAU inter-normal-white-12px" data-id="355:49">Monitor<br>R$ 720,00</div><div class="rectangle-1231-TgPtAU" data-id="356:52"></div><img class="image-203-TgPtAU" data-id="356:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-203.png" alt="image 203"><div class="rectangle-1232-TgPtAU" data-id="383:66"></div><div class="rectangle-1233-TgPtAU" data-id="383:67"></div><div class="rectangle-1234-TgPtAU" data-id="383:68"></div><div class="rectangle-1235-TgPtAU" data-id="383:70"></div><div class="rectangle-1236-TgPtAU" data-id="383:71"></div><div class="rectangle-1237-TgPtAU" data-id="383:72"></div><div class="headseat-TgPtAU inter-normal-white-12px" data-id="383:73">Headseat</div><img class="image-TgPtAU image" data-id="412:5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-3.png" alt="image"><img class="laptop-with-blank-bl-TgPtAU" data-id="412:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/laptop-with-blank-black-screen-white-table-1.png" alt="laptop-with-blank-black-screen-white-table 1"><div class="notebook-seminovo-dell-TgPtAU inter-normal-white-12px" data-id="412:286">Notebook Seminovo Dell</div><p class="cpu-positivo-4-gb-de-TgPtAU inter-normal-white-12px" data-id="412:295">CPU POSITIVO 4GB DE RAM<br>Tratar com vendedor</p><div class="tv-resoluo-boa-TgPtAU inter-normal-white-12px" data-id="412:296">TV&nbsp;&nbsp;resolução boa</div><div class="tela-de-macbook-r-66720-TgPtAU inter-normal-white-12px" data-id="412:299">Tela de Macbook<br>R$ 667,20</div><img class="image-199-TgPtAU" data-id="352:23" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-199@2x.png" alt="image 199"><img class="image-201-TgPtAU" data-id="355:48" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-201.png" alt="image 201"><img class="image-202-TgPtAU" data-id="356:51" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-202.png" alt="image 202"><img class="image-204-TgPtAU" data-id="357:57" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-204.png" alt="image 204"><img class="image-d8opMZ image" data-id="383:75" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-4.png" alt="image"><img class="line-140-TgPtAU" data-id="412:285" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-140.svg" alt="Line 140"><div class="rectangle-1343-TgPtAU" data-id="497:91"></div><div class="rectangle-1344-TgPtAU" data-id="497:100"></div><div class="clique-aqui-para-pesquisar-TgPtAU inter-semi-bold-sonic-silver-9px" data-id="497:101">Clique aqui para pesquisar</div><img class="rectangle-1345-TgPtAU" data-id="497:102" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1345-7.svg" alt="Rectangle 1345"><div class="rectangle-1356-TgPtAU" data-id="497:118"></div><div class="navegao-TgPtAU inter-normal-salem-17px" data-id="497:119">Navegação</div><div class="redes-sociais-TgPtAU inter-normal-salem-17px" data-id="497:120">Redes Sociais</div><div class="contato-TgPtAU inter-normal-salem-17px" data-id="497:121">Contato</div><div class="fale-conosco-TgPtAU fale-conosco-1 inter-bold-black-12px" data-id="497:125">Fale Conosco</div><div class="sustentechoficialgmailcom-TgPtAU inter-bold-black-12px" data-id="497:126">sustentech.oficial@gmail.com</div><div class="x13-91234-5678-TgPtAU inter-bold-black-12px" data-id="497:127">(13) 91234-5678</div><div class="perguntas-frequentes-TgPtAU perguntas-frequentes-1 inter-bold-black-12px" data-id="497:128">Perguntas Frequentes</div><div class="tiktok-TgPtAU inter-bold-black-12px" data-id="497:132">Tiktok</div><div class="facebook-TgPtAU inter-bold-black-12px" data-id="497:133">Facebook</div><div class="instagram-TgPtAU inter-bold-black-12px" data-id="497:134">Instagram</div><div class="discord-TgPtAU inter-bold-black-12px" data-id="497:135">Discord</div><div class="github-TgPtAU inter-bold-black-12px" data-id="497:136">Github</div><img class="pesquisa-de-lupa-2-3-TgPtAU" data-id="497:105" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pesquisa-de-lupa--2--7.png" alt="pesquisa-de-lupa (2) 3"><img class="do-utilizador-2-9-TgPtAU" data-id="497:104" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/do-utilizador--2--12.png" alt="do-utilizador (2) 9"><img class="image-275-TgPtAU" data-id="497:88" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-275.png" alt="image 275"><img class="line-93-TgPtAU" data-id="334:2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-93-2.svg" alt="Line 93"><img class="line-152-TgPtAU" data-id="497:106" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-152.svg" alt="Line 152"><div class="rectangle-1355-d8opMZ" data-id="497:107"></div><div class="flex-container-38365-TgPtAU" data-id="383:65-container"><div class="text0-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text0"><span class="span0-8xNkJa inter-normal-white-12px"><br></span></div><div class="text1-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text1"><span class="span1-Bv43W7 inter-normal-white-12px">Smartphones <br></span></div><div class="text2-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text2"><span class="span2-qygxIo inter-normal-white-12px"><br></span></div><div class="text3-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text3"><span class="span3-gYmgio inter-normal-white-12px">Notebook <br></span></div><div class="text4-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text4"><span class="span4-dHxzxA inter-normal-white-12px"><br></span></div><div class="text5-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text5"><span class="span5-sxgInm inter-normal-white-12px">Desktops <br></span></div><div class="text6-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text6"><span class="span6-zgecPP inter-normal-white-12px"><br></span></div><div class="text7-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text7"><span class="span7-u9SxmV inter-normal-white-12px">Fones de ouvido <br></span></div><div class="text8-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text8"><span class="span8-PnwFGh inter-normal-white-12px"><br></span></div><div class="text9-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text9"><span class="span9-F9W3oI inter-normal-white-12px">Televisão <br></span></div><div class="text10-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text10"><span class="span10-oBiY8c inter-normal-white-12px"><br></span></div><div class="text11-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text11"><span class="span11-14053q inter-normal-white-12px">Monitores <br></span></div><div class="text12-38365-FBQX3E inter-normal-white-12px" data-id="383:65-text12"><span class="span12-6vDSi7 inter-normal-white-12px"></span></div></div><div class="filtro-de-pesquisa-TgPtAU" data-id="383:2">Filtro de Pesquisa</div><img class="filtro-1-TgPtAU" data-id="497:117" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/filtro-1.png" alt="filtro 1"><img class="check-in-quadrangular-1-TgPtAU" data-id="387:10" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/check-in-quadrangular-1.png" alt="check-in-quadrangular 1"><img class="pare-4-TgPtAU" data-id="387:14" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pare-4.png" alt="pare 4"><img class="pare-6-TgPtAU" data-id="497:113" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pare-4.png" alt="pare 6"><img class="pare-7-TgPtAU" data-id="497:114" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pare-4.png" alt="pare 7"><img class="pare-8-TgPtAU" data-id="497:115" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pare-4.png" alt="pare 8"><img class="pare-9-TgPtAU" data-id="497:116" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pare-4.png" alt="pare 9"><img class="line-83-TgPtAU" data-id="195:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-83.svg" alt="Line 83"><img class="line-153-TgPtAU" data-id="497:143" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-153.svg" alt="Line 153"><img class="line-149-TgPtAU" data-id="497:89" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-149-3.svg" alt="Line 149"><img class="image-276-TgPtAU" data-id="497:144" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295-1.png" alt="image 276"><img class="image-277-TgPtAU" data-id="497:145" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295.png" alt="image 277"><img class="image-278-TgPtAU" data-id="497:146" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-296.png" alt="image 278"><img class="image-279-TgPtAU" data-id="497:147" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-297.png" alt="image 279"><img class="image-280-TgPtAU" data-id="497:148" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-298.png" alt="image 280"><img class="image-281-TgPtAU" data-id="497:149" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-299.png" alt="image 281"><img class="seta-para-baixo-2-TgPtAU" data-id="598:964" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/seta-para-baixo-2.png" alt="seta-para-baixo 2"><a href="fale-conosco"><div class="fale-conosco-d8opMZ fale-conosco-1 inter-extra-bold-white-20px" data-id="598:965">Fale Conosco</div></a><a href="locais-de-descarte"><div class="locais-de-reciclagem-TgPtAU inter-extra-bold-white-20px" data-id="598:966">Locais de Reciclagem</div></a><a href="sobre-nos"><div class="sobre-ns-TgPtAU sobre-ns inter-extra-bold-white-20px" data-id="598:967">Sobre Nós</div></a><a href="pagina-inicial"><div class="incio-TgPtAU inter-extra-bold-white-20px" data-id="598:968">Início</div></a><a href="produtos"><div class="produtos-TgPtAU produtos-1 inter-extra-bold-white-20px" data-id="598:969">Produtos</div></a><a href="cadastro-de-usuarios"><div class="cadastro-TgPtAU inter-extra-bold-white-20px" data-id="598:970">Cadastro</div></a><div class="pgina-inicial-TgPtAU inter-bold-black-12px" data-id="598:971">Página Inicial</div><a href="cadastro-de-usuarios"><div class="cadastre-se-TgPtAU inter-bold-black-12px" data-id="598:972">Cadastre-se</div></a><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-TgPtAU inter-bold-black-12px" data-id="598:973">Cadastro de Produtos</div></a><a href="produtos"><div class="produtos-d8opMZ produtos-1 inter-bold-black-12px" data-id="598:974">Produtos</div></a><a href="sobre-nos"><div class="sobre-ns-d8opMZ sobre-ns inter-bold-black-12px" data-id="598:975">Sobre Nós</div></a><a href="fale-conosco"><div class="fale-conosco-wjyOhI fale-conosco-1 inter-bold-black-12px" data-id="598:976">Fale Conosco</div></a><a href="sugestoes"><div class="sugestes-TgPtAU inter-bold-black-12px" data-id="598:977">Sugestões</div></a><a href="perguntas-frequentes"><div class="perguntas-frequentes-d8opMZ perguntas-frequentes-1 inter-bold-black-12px" data-id="598:978">Perguntas Frequentes</div></a><a href="locais-de-descarte"><div class="locais-de-descarte-TgPtAU inter-bold-black-12px" data-id="598:979">Locais de Descarte</div></a></div></div><div class="container-center-horizontal"><div class="cadastro-de-produtos screen " data-id="497:163"><img class="rectangle-1-9l6jeH" data-id="380:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1.svg" alt="Rectangle 1"><div class="rectangle-1350-9l6jeH" data-id="496:42"></div><div class="rectangle-1352-9l6jeH" data-id="496:69"></div><img class="image-267-9l6jeH" data-id="496:70" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-267.png" alt="image 267"><div class="rectangle-1353-9l6jeH" data-id="496:71"></div><img class="image-268-9l6jeH" data-id="496:72" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-267.png" alt="image 268"><img class="line-85-9l6jeH" data-id="195:5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-85.svg" alt="Line 85"><h1 class="title-9l6jeH" data-id="47:2">O que deseja cadastrar?</h1><img class="line-62-9l6jeH" data-id="47:4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-62.svg" alt="Line 62"><div class="rectangle-47-9l6jeH" data-id="47:5"></div><div class="rectangle-50-9l6jeH" data-id="47:11"></div><div class="rectangle-55-9l6jeH" data-id="47:27"></div><div class="rectangle-56-9l6jeH" data-id="47:43"></div><div class="rectangle-57-9l6jeH" data-id="47:45"></div><div class="rectangle-48-9l6jeH" data-id="47:7"></div><div class="nome-do-produto-9l6jeH inter-normal-black-20px" data-id="47:72">Nome do produto:</div><div class="descrio-do-produto-9l6jeH inter-normal-black-20px" data-id="47:74">Descrição do produto:</div><div class="condio-9l6jeH inter-normal-black-20px" data-id="47:75">Condição:</div><div class="modelo-9l6jeH modelo inter-normal-black-20px" data-id="47:76">Modelo:</div><div class="data-da-compra-9l6jeH inter-normal-black-20px" data-id="47:77">Data da compra:</div><div class="marca-9l6jeH inter-normal-black-20px" data-id="47:79">Marca:</div><img class="line-68-9l6jeH" data-id="47:82" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-68.svg" alt="Line 68"><div class="rectangle-1343-9l6jeH" data-id="493:128"></div><div class="preo-9l6jeH inter-normal-black-20px" data-id="47:91">Preço:</div><div class="descrio-9l6jeH inter-normal-black-20px" data-id="47:94">Descrição:</div><div class="rectangle-228-9l6jeH" data-id="184:102"></div><p class="insira-uma-ou-mais-imagens-9l6jeH inter-normal-black-20px" data-id="184:103">Insira uma ou mais imagens:</p><div class="nome-9l6jeH inter-normal-black-20px" data-id="493:129">Nome</div><div class="rectangle-1344-9l6jeH" data-id="493:130"></div><div class="modelo-fB8Kq2 modelo inter-normal-black-20px" data-id="493:131">Modelo</div><div class="rectangle-1345-9l6jeH" data-id="493:132"></div><div class="estado-de-uso-9l6jeH inter-normal-black-20px" data-id="493:133">Estado de Uso</div><div class="rectangle-1346-9l6jeH" data-id="493:134"></div><div class="ano-de-fabricao-9l6jeH inter-normal-black-20px" data-id="493:135">Ano de Fabricação</div><div class="rectangle-1348-9l6jeH" data-id="493:138"></div><div class="informaes-do-vendedor-9l6jeH inter-normal-black-20px" data-id="493:140">Informações do vendedor:</div><div class="rectangle-1349-9l6jeH" data-id="493:141"></div><div class="contato-9l6jeH contato inter-normal-black-20px" data-id="496:67">Contato:</div><div class="rectangle-1351-9l6jeH" data-id="496:68"></div><div class="rectangle-1347-9l6jeH" data-id="493:136"></div><div class="rectangle-230-9l6jeH" data-id="184:121"></div><div class="anunciar-9l6jeH inter-normal-coconut-25px" data-id="184:122">Anunciar</div><img class="image-163-9l6jeH" data-id="184:105" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-267.png" alt="image 163"><div class="rectangle-1221-9l6jeH" data-id="341:20"></div><div class="rectangle-1222-9l6jeH" data-id="341:21"></div><div class="rectangle-1223-9l6jeH" data-id="341:22"></div><div class="rectangle-1224-9l6jeH" data-id="341:23"></div><div class="rectangle-1220-9l6jeH" data-id="341:19"></div><img class="image-192-9l6jeH image-192" data-id="341:24" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-192.png" alt="image 192"><img class="image-192-fB8Kq2 image-192" data-id="341:25" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-192-1.png" alt="image 192"><img class="image-192-DhGg5p image-192" data-id="341:26" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-192-2.png" alt="image 192"><img class="image-192-MDKFsc image-192" data-id="341:28" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-192-3.png" alt="image 192"><div class="smartphones-9l6jeH jockeyone-normal-white-16px" data-id="341:29">Smartphones</div><div class="notebooks-9l6jeH jockeyone-normal-white-16px" data-id="341:30">Notebooks</div><p class="fones-de-ouvido-e-headsets-9l6jeH jockeyone-normal-white-16px" data-id="341:31">Fones de ouvido e headsets</p><div class="desktops-9l6jeH jockeyone-normal-white-16px" data-id="341:32">Desktops</div><div class="t-vs-e-monitores-9l6jeH jockeyone-normal-white-16px" data-id="341:33">TVs e monitores</div><img class="correto-2-1-9l6jeH" data-id="342:37" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/correto--2--1.png" alt="correto (2) 1"><img class="line-143-9l6jeH" data-id="426:7" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-143.svg" alt="Line 143"><div class="rectangle-1234-9l6jeH" data-id="493:127"></div><div class="rectangle-1354-9l6jeH" data-id="497:77"></div><div class="rectangle-1343-fB8Kq2" data-id="496:5"></div><div class="rectangle-1344-fB8Kq2" data-id="496:14"></div><div class="clique-aqui-para-pesquisar-9l6jeH inter-semi-bold-sonic-silver-9px" data-id="496:15">Clique aqui para pesquisar</div><img class="rectangle-1345-fB8Kq2" data-id="496:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1345-1.svg" alt="Rectangle 1345"><div class="navegao-9l6jeH inter-normal-salem-17px" data-id="496:43">Navegação</div><div class="redes-sociais-9l6jeH inter-normal-salem-17px" data-id="496:44">Redes Sociais</div><div class="contato-fB8Kq2 contato inter-normal-salem-17px" data-id="496:45">Contato</div><div class="fale-conosco-9l6jeH fale-conosco-1 inter-bold-black-12px" data-id="496:49">Fale Conosco</div><div class="sustentechoficialgmailcom-9l6jeH inter-bold-black-12px" data-id="496:50">sustentech.oficial@gmail.com</div><div class="x13-91234-5678-9l6jeH inter-bold-black-12px" data-id="496:51">(13) 91234-5678</div><div class="perguntas-frequentes-9l6jeH perguntas-frequentes-1 inter-bold-black-12px" data-id="496:52">Perguntas Frequentes</div><div class="tiktok-9l6jeH inter-bold-black-12px" data-id="496:56">Tiktok</div><div class="facebook-9l6jeH inter-bold-black-12px" data-id="496:57">Facebook</div><div class="instagram-9l6jeH inter-bold-black-12px" data-id="496:58">Instagram</div><div class="discord-9l6jeH inter-bold-black-12px" data-id="496:59">Discord</div><div class="github-9l6jeH inter-bold-black-12px" data-id="496:60">Github</div><div class="anncio-9l6jeH" data-id="47:73">Anúncio:</div><img class="image-260-9l6jeH" data-id="496:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-260.png" alt="image 260"><img class="line-102-9l6jeH" data-id="412:300" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-102.svg" alt="Line 102"><img class="line-149-9l6jeH" data-id="496:76" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-149.svg" alt="Line 149"><img class="line-144-9l6jeH" data-id="426:8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-144.svg" alt="Line 144"><p class="por-favor-responda-o-segunte-formulrio-9l6jeH" data-id="47:3">Por favor, responda o segunte formulário:</p><img class="image-269-9l6jeH" data-id="497:154" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295-1.png" alt="image 269"><img class="image-270-9l6jeH" data-id="497:155" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295.png" alt="image 270"><img class="image-271-9l6jeH" data-id="497:156" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-296.png" alt="image 271"><img class="image-272-9l6jeH" data-id="497:157" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-297.png" alt="image 272"><img class="image-273-9l6jeH" data-id="497:158" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-298.png" alt="image 273"><img class="image-274-9l6jeH" data-id="497:159" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-299.png" alt="image 274"><img class="do-utilizador-2-8-9l6jeH" data-id="497:160" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/do-utilizador--2--12.png" alt="do-utilizador (2) 8"><img class="pesquisa-de-lupa-2-2-9l6jeH" data-id="497:161" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pesquisa-de-lupa--2--7.png" alt="pesquisa-de-lupa (2) 2"><img class="seta-para-baixo-2-9l6jeH" data-id="598:948" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/seta-para-baixo-2.png" alt="seta-para-baixo 2"><a href="fale-conosco"><div class="fale-conosco-fB8Kq2 fale-conosco-1 inter-extra-bold-white-20px" data-id="598:949">Fale Conosco</div></a><a href="locais-de-descarte"><div class="locais-de-reciclagem-9l6jeH inter-extra-bold-white-20px" data-id="598:950">Locais de Reciclagem</div></a><a href="sobre-nos"><div class="sobre-ns-9l6jeH sobre-ns inter-extra-bold-white-20px" data-id="598:951">Sobre Nós</div></a><a href="pagina-inicial"><div class="incio-9l6jeH inter-extra-bold-white-20px" data-id="598:952">Início</div></a><a href="produtos"><div class="produtos-9l6jeH produtos-1 inter-extra-bold-white-20px" data-id="598:953">Produtos</div></a><a href="cadastro-de-usuarios"><div class="cadastro-9l6jeH inter-extra-bold-white-20px" data-id="598:954">Cadastro</div></a><div class="pgina-inicial-9l6jeH inter-bold-black-12px" data-id="598:955">Página Inicial</div><a href="cadastro-de-usuarios"><div class="cadastre-se-9l6jeH inter-bold-black-12px" data-id="598:956">Cadastre-se</div></a><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-9l6jeH inter-bold-black-12px" data-id="598:957">Cadastro de Produtos</div></a><a href="produtos"><div class="produtos-fB8Kq2 produtos-1 inter-bold-black-12px" data-id="598:958">Produtos</div></a><a href="sobre-nos"><div class="sobre-ns-fB8Kq2 sobre-ns inter-bold-black-12px" data-id="598:959">Sobre Nós</div></a><a href="fale-conosco"><div class="fale-conosco-DhGg5p fale-conosco-1 inter-bold-black-12px" data-id="598:960">Fale Conosco</div></a><a href="sugestoes"><div class="sugestes-9l6jeH inter-bold-black-12px" data-id="598:961">Sugestões</div></a><a href="perguntas-frequentes"><div class="perguntas-frequentes-fB8Kq2 perguntas-frequentes-1 inter-bold-black-12px" data-id="598:962">Perguntas Frequentes</div></a><a href="locais-de-descarte"><div class="locais-de-descarte-9l6jeH inter-bold-black-12px" data-id="598:963">Locais de Descarte</div></a></div></div><div class="container-center-horizontal"><div class="sobre-nos screen " data-id="497:216"><div class="rectangle-1276-FfZDN2" data-id="497:178"></div><img class="rectangle-1275-FfZDN2" data-id="387:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1275.svg" alt="Rectangle 1275"><img class="rectangle-1057-FfZDN2" data-id="195:2555" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-81.png" alt="Rectangle 1057"><img class="line-52-FfZDN2" data-id="18:149" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-52.svg" alt="Line 52"><img class="line-155-FfZDN2" data-id="497:208" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-155.svg" alt="Line 155"><img class="line-92-FfZDN2" data-id="248:44" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-92-1.svg" alt="Line 92"><img class="line-35-FfZDN2" data-id="2:329" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-35.svg" alt="Line 35"><img class="line-94-FfZDN2" data-id="248:46" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-94-1.svg" alt="Line 94"><div class="histria-do-projeto-FfZDN2 sawarabimincho-normal-salem-40px" data-id="80:5">História do Projeto</div><div class="origem-dos-nomes-FfZDN2 sawarabimincho-normal-salem-40px" data-id="80:6">Origem dos nomes</div><p class="o-projeto-unificado-FfZDN2" data-id="345:2">O projeto unificado &#34;Sustentech Lovelace&#34; representa a fusão de sustentabilidade e tecnologia avançada, inspirado pela pioneira da programação, Ada Lovelace. O nome reflete o compromisso com soluções tecnológicas sustentáveis, promovendo práticas ecológicas e socialmente responsáveis. &#34;Sustentech Lovelace&#34; combina a reutilização e reciclagem de tecnologias de ponta, guiado por uma filosofia de inovação sustentável e respeito ao legado científico.</p><p class="o-projeto-sustentech-FfZDN2" data-id="346:7">O projeto Sustentech Lovelace surge como um (TCC), Trabalho de conclusão de curso. A plataforma foi criada como intermediária entre pessoas que possuam aparelhos que não servem mais para elas e profissionais que reutilizam peças e empresas especializadas em reciclagem de eletrônicos.</p><img class="image-205-FfZDN2" data-id="357:61" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-205.png" alt="image 205"><img class="image-206-FfZDN2" data-id="357:63" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-206.png" alt="image 206"><img class="image-195-FfZDN2" data-id="352:14" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-195.png" alt="image 195"><img class="image-196-FfZDN2" data-id="352:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-196.png" alt="image 196"><img class="image-194-FfZDN2" data-id="352:12" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-194.png" alt="image 194"><h1 class="title-FfZDN2 robotoslab-normal-salem-45px" data-id="2:246">Valores</h1><div class="viso-FfZDN2 robotoslab-normal-salem-45px" data-id="70:13">Visão</div><div class="misso-FfZDN2 robotoslab-normal-salem-45px" data-id="2:244">Missão</div><p class="mitigar-os-problemas-FfZDN2" data-id="411:2">Mitigar os problemas causados pelo consumo e descarte desenfreados de aparelhos tecnológicos.</p><p class="estabelecer-se-como-FfZDN2" data-id="411:3">Estabelecer-se como uma plataforma reconhecida pelo seu compromisso com a sustentabilidade e a responsabilidade ambiental.</p><p class="inovao-utilizar-meno-FfZDN2" data-id="411:4">Inovação;<br>Utilizar menos e produzir mais; <br>Sustentabilidade Ambiental;&nbsp;&nbsp;Transparência e Confiança;</p><div class="rectangle-1343-FfZDN2" data-id="497:165"></div><div class="rectangle-1344-FfZDN2" data-id="497:174"></div><div class="clique-aqui-para-pesquisar-FfZDN2 inter-semi-bold-sonic-silver-9px" data-id="497:175">Clique aqui para pesquisar</div><img class="rectangle-1345-FfZDN2" data-id="497:176" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/rectangle-1345-1.svg" alt="Rectangle 1345"><img class="image-260-FfZDN2" data-id="497:210" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295-1.png" alt="image 260"><img class="image-261-FfZDN2" data-id="497:211" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-295.png" alt="image 261"><img class="image-262-FfZDN2" data-id="497:212" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-296.png" alt="image 262"><img class="image-263-FfZDN2" data-id="497:213" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-297.png" alt="image 263"><img class="image-264-FfZDN2" data-id="497:214" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-298.png" alt="image 264"><img class="image-265-FfZDN2" data-id="497:215" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/image-299.png" alt="image 265"><div class="navegao-FfZDN2 inter-normal-salem-17px" data-id="497:179">Navegação</div><div class="redes-sociais-FfZDN2 inter-normal-salem-17px" data-id="497:180">Redes Sociais</div><div class="contato-FfZDN2 inter-normal-salem-17px" data-id="497:181">Contato</div><div class="fale-conosco-FfZDN2 fale-conosco-1 inter-bold-black-12px" data-id="497:185">Fale Conosco</div><div class="sustentechoficialgmailcom-FfZDN2 inter-bold-black-12px" data-id="497:186">sustentech.oficial@gmail.com</div><div class="x13-91234-5678-FfZDN2 inter-bold-black-12px" data-id="497:187">(13) 91234-5678</div><div class="perguntas-frequentes-FfZDN2 perguntas-frequentes-1 inter-bold-black-12px" data-id="497:188">Perguntas Frequentes</div><div class="tiktok-FfZDN2 inter-bold-black-12px" data-id="497:192">Tiktok</div><div class="facebook-FfZDN2 inter-bold-black-12px" data-id="497:193">Facebook</div><div class="instagram-FfZDN2 inter-bold-black-12px" data-id="497:194">Instagram</div><div class="discord-FfZDN2 inter-bold-black-12px" data-id="497:195">Discord</div><div class="github-FfZDN2 inter-bold-black-12px" data-id="497:196">Github</div><img class="do-utilizador-2-10-FfZDN2" data-id="497:207" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/do-utilizador--2--12.png" alt="do-utilizador (2) 10"><img class="pesquisa-de-lupa-2-4-FfZDN2" data-id="497:206" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/pesquisa-de-lupa--2--7.png" alt="pesquisa-de-lupa (2) 4"><img class="line-95-FfZDN2" data-id="347:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-95-1.svg" alt="Line 95"><img class="line-154-FfZDN2" data-id="497:205" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/line-154.svg" alt="Line 154"><img class="seta-para-baixo-2-FfZDN2" data-id="598:980" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d6260bd21b2d52d175deb3/releases/66d626bf06bfca24c5ff7167/img/seta-para-baixo-2.png" alt="seta-para-baixo 2"><a href="fale-conosco"><div class="fale-conosco-lKzukU fale-conosco-1 inter-extra-bold-white-20px" data-id="598:981">Fale Conosco</div></a><a href="locais-de-descarte"><div class="locais-de-reciclagem-FfZDN2 inter-extra-bold-white-20px" data-id="598:982">Locais de Reciclagem</div></a><a href="sobre-nos"><div class="sobre-ns-FfZDN2 sobre-ns inter-extra-bold-white-20px" data-id="598:983">Sobre Nós</div></a><a href="pagina-inicial"><div class="incio-FfZDN2 inter-extra-bold-white-20px" data-id="598:984">Início</div></a><a href="produtos"><div class="produtos-FfZDN2 produtos-1 inter-extra-bold-white-20px" data-id="598:985">Produtos</div></a><a href="cadastro-de-usuarios"><div class="cadastro-FfZDN2 inter-extra-bold-white-20px" data-id="598:986">Cadastro</div></a><div class="pgina-inicial-FfZDN2 inter-bold-black-12px" data-id="598:987">Página Inicial</div><a href="cadastro-de-usuarios"><div class="cadastre-se-FfZDN2 inter-bold-black-12px" data-id="598:988">Cadastre-se</div></a><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-FfZDN2 inter-bold-black-12px" data-id="598:989">Cadastro de Produtos</div></a><a href="produtos"><div class="produtos-lKzukU produtos-1 inter-bold-black-12px" data-id="598:990">Produtos</div></a><a href="sobre-nos"><div class="sobre-ns-lKzukU sobre-ns inter-bold-black-12px" data-id="598:991">Sobre Nós</div></a><a href="fale-conosco"><div class="fale-conosco-604npO fale-conosco-1 inter-bold-black-12px" data-id="598:992">Fale Conosco</div></a><a href="sugestoes"><div class="sugestes-FfZDN2 inter-bold-black-12px" data-id="598:993">Sugestões</div></a><a href="perguntas-frequentes"><div class="perguntas-frequentes-lKzukU perguntas-frequentes-1 inter-bold-black-12px" data-id="598:994">Perguntas Frequentes</div></a><a href="locais-de-descarte"><div class="locais-de-descarte-FfZDN2 inter-bold-black-12px" data-id="598:995">Locais de Descarte</div></a></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
