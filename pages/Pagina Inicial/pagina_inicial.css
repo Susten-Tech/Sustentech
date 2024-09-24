@@ -45,72 +45,10 @@ input[type="text"]::placeholder {
     color: #7ed957;
 }
 
-/* Estilo da Navbar */
-.navbar {
-    background-color: #0d7e2e;
-    padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 100;
-    transition: background-color 0.3s ease;
-}
-
-.navbar:hover {
-    background-color: #0f8f34;
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links li a {
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links li a:hover {
-    background-color: #7ed957;
-    border-radius: 4px;
-    transform: scale(1.05);
-}
-
-.navbar .pesquisa {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .perfil-icon {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .perfil-icon img {
-    width: 40px;
-    border-radius: 50%;
-}
 
 /* Seção Hero */
 .hero {
-    background-image: url('path-to-hero-image.jpg');
+    background-image: url;
     background-size: cover;
     background-position: center;
     color: white;

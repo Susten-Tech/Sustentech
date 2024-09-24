@@ -6,10 +6,11 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Inter";
-    font-size: 15px;
-    font-weight: bold;
+.nav-body {
+    font-family: "Inter", sans-serif; /* Adicione um fallback */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    background-color: #f4f4f4; /* Cor de fundo, se necessário */
 }
 
 .navbar {
@@ -31,7 +32,6 @@ body {
     align-items: center;
 }
 
-
 .nav-palavras {
     font-family: "Inter";
     color: #fff;
@@ -43,11 +43,11 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .nav-links li a {
-    color: #fff; /* Palavras*/
+    color: #fff; /* Palavras */
     text-decoration: none;
     font-size: 16px;
 }
@@ -85,11 +85,25 @@ body {
     color: #ddd;
 }
 
-/* Mostra o as páginas ao passar o mouse */
+.nav-links li a {
+    color: white; 
+    padding: 15px 20px;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-links li a:hover {
+    background-color: #7ed957; 
+    border-radius: 1px; 
+    transform: scale(1.05); 
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Alternativa para clique  */
+
+/* Alternativa para clique */
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
@@ -128,7 +142,7 @@ body {
     color: #ddd;
 }
 
-/*Responsivo*/
+/* Responsivo */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
