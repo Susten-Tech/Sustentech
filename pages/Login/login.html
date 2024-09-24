@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    
+    <link rel="stylesheet" href="NavBar/navbar.css">
+
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <style>
+
+body{
+    background-color: #F1FAF1;
+}
+.login
+{
+    font-family: "DM Sans", sans-serif;
+    position: absolute;
+    background-color: #e1ffe1 ;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    color: #0D7E2E;
+}
+.body{
+    background-color: #c3f6c3;
+}
+input{
+    padding: 15px;
+    font-size: 18px;
+    width: 90%;
+    margin-bottom: 10px;
+    outline: none;
+}
+.botao{
+    font-family: "DM Sans", sans-serif;
+    margin-top: 20px;
+    width: 70%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 6%;
+    background-color: #0D7E2E;
+    color: white;
+
+}
+.botao:hover{
+    background-color: #2f5c2c;
+}
+h2{
+    font-family: "DM Sans", sans-serif;
+    padding: 8px;
+    font-size: 40px;
+}
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <input type="text" placeholder="Nome">
+        <br>
+        <input type="password" placeholder="Senha">
+        <br>
+        <input class="botao" type="submit" value="Entrar">
+    </div>
+</body>
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="nav-tamanho">
+        <div navbar-sustentech>
+          <a href="#"><img class="image" src="NavBar/imagens/sustentech_logo.png" alt="sustentech logo"></a>
+        </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Locais de Reciclagem</a></li>
+            <li class="dropdown">
+              <a href="#">Fale Conosco</a>
+              <ul class="dropdown-content">
+                  <li><a href="#">Sugestões</a></li>
+                  <li><a href="#">Fale Conosco</a></li>
+                  <li><a href="#">Perguntas Frequentes</a></li>
+              </ul>
+          </li>
+      </ul>
+      <div class="pesquisa">
+          <input type="text" placeholder="Clique aqui para pesquisar...">
+          <button><i class="fas fa-search"></i>
+            <a href="#"><img class="image" src="NavBar/imagens/lupa.png" alt="icone lupa"></a>
+          </button>
+      </div>
+      <div class="perfil-icon">
+        <a href="#"><img class="image" src="NavBar/imagens/icone_perfil.png" alt="icone perfil"></a>
+        <i class="user"></i></a>
+      </div>
+  </div>
+</nav>
+</html>
