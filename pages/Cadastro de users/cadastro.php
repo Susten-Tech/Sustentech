@@ -22,7 +22,7 @@ if(!$conn){
  echo"<h2 style = 'color:green; text-align:center; font-size:25px'><a href= 'usuario.html'>VOLTAR<a></h2>";
 
 }
-if($_SERVER['REQUEST_METHOD'] ==x= 'POST'){
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
  
     $nm_cliente = $_POST ["nm_cliente"];
     $email = $_POST ["email"];
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] ==x= 'POST'){
     $senha = $_POST ["senha"];
     $ConfirmaSenha = $_POST ["ConfirmaSenha"];
 
-    if($senha ====$ConfirmaSenha){
+    if($senha === $ConfirmaSenha){
 
         $sql = "SELECT * FROM  tb_vendedores WHERE nm_cliente ='$nm_cliente'";
         $retorno = mysqli_query ($conn, $sql);
