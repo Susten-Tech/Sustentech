@@ -6,6 +6,7 @@
     <title>Tela de Empresas</title>
 
     <link rel="stylesheet" href="../NavBar/navbar.css">
+    <link rel="stylesheet" href="../Rodapé/Rodapé.css">
 
     <link rel="icon" type="image/png" href="../../img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,46 +68,45 @@ h2{
     </style>
 </head>
 <body>
-    
-<!--BARRA DE NAVEGAÇÃO-->
-<nav class="navbar">
-    <div class="navbar-container">
-      <div class="nav-tamanho">
-        <div navbar-sustentech>
-          <a href="#"><img class="image" src="../NavBar/imagens/sustentech_logo.png" alt="sustentech logo"></a>
-        </div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Cadastro</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Locais de Reciclagem</a></li>
-            <li class="dropdown">
-              <a href="#">Fale Conosco</a>
-              <ul class="dropdown-content">
-                  <li><a href="#">Sugestões</a></li>
-                  <li><a href="#">Fale Conosco</a></li>
-                  <li><a href="#">Perguntas Frequentes</a></li>
-              </ul>
-          </li>
-      </ul>
-      <div class="pesquisa">
-          <input type="text" placeholder="Clique aqui para pesquisar...">
-          <button><i class="fas fa-search"></i>
-            <a href="#"><img class="image" src="../NavBar/imagens/lupa.png" alt="icone lupa"></a>
-          </button>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="nav-tamanho">
+            <div navbar-sustentech>
+              <a href="#"><img class="image" src="../NavBar/imagens/sustentech_logo.png" alt="sustentech logo"></a>
+            </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../Pagina Inicial/pagina_inicial.html">Início</a></li>
+                <li><a href="../Produtos/produtos.html">Produtos</a></li>
+                <li class="dropdown">
+                    <a href="../Cadastro de users/usuarios.html">Cadastro</a>
+                    <ul class="dropdown-content">
+                        <li><a href="usuarios.html">Usuários</a></li>
+                        <li><a href="../Cadastro de users/usuarios_empresas.html">Empresas</a></li>
+                        <li><a href="../Cadastro Produtos/cadastro_produtos.html">Produtos</a></li>
+                        </ul>
+                <li><a href="../Sobre Nos/sobre_nos.html">Sobre Nós</a></li>
+                <li><a href="../Locais de Descarte/locais_descarte.html">Locais de Reciclagem</a></li>
+                <li><a href="../Fale Conosco/fale_conosco.html">Fale Conosco</a></li>
+                <li><a href="../Sugestoes/sugestoes.html">Sugestões</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <div class="pesquisa">
+              <input type="text" placeholder="Clique aqui para pesquisar...">
+              <button><i class="fas fa-search"></i>
+                <a href="#"><img class="image" src="../NavBar/imagens/lupa.png" alt="icone lupa"></a>
+              </button>
+          </div>
+          <div class="perfil-icon">
+            <a href="#"><img class="image" src="../NavBar/imagens/icone_perfil.png" alt="icone perfil"></a>
+            <i class="user"></i></a>
+          </div>
       </div>
-      <div class="perfil-icon">
-        <a href="#"><img class="image" src="../NavBar/imagens/icone_perfil.png" alt="icone perfil"></a>
-        <i class="user"></i></a>
-      </div>
-  </div>
-</nav>
-
+  </nav>
     <div class="login">
         <h2>Cadastro de Empresa:</h2>
-        <form method="POST" action="cadastrar.php">
+        <form method="POST" action="../Perfil/perfil_empresa.html">
         <label for="usuario">Usuário:</label><br>
         <input type="text" id="nm_empresa" name="nm_empresa" required><br>
     
@@ -144,15 +144,7 @@ h2{
         <input type="password" id="ConfirmaSenha" name="ConfirmaSenha" required><br>
     <br>
     <h1><input class="botao" type="submit"  href="perfil.html" value="Cadastrar"></h1>
-
-    
-    
-    
-    
-    
-    
     </form>
     </div>
-
 </body>
 </html>
